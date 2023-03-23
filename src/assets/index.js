@@ -13,6 +13,9 @@ import pracaWToku from './pracaWToku.png'
 import instagram from './instagram.png'
 import facebook from './facebook.png'
 import linkedin from './linkedin.png'
+import arrow1 from './arrows/Arrow1.png'
+import arrow2 from './arrows/Arrow2.png'
+import arrow3 from './arrows/Arrow3.png'
 
 export {
     WMlogo,
@@ -29,5 +32,8 @@ export {
     pracaWToku,
     facebook,
     instagram,
-    linkedin
+    linkedin,
+    arrow1,
+    arrow2,
+    arrow3
 }
