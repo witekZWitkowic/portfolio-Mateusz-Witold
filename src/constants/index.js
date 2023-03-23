@@ -82,6 +82,7 @@ export const howItsDone = [
 export const pricing = [
     {
         title: "Edycja Strony",
+        desc: "Masz już stronę, którą należy usprawnić, lub zmodernizować? Ta oferta jest dla Ciebie",
         price: "Do ustalenia",
         features: [
             {
@@ -100,6 +101,7 @@ export const pricing = [
     }, 
     {
         title: "Basic Plan",
+        desc: "Strona-wizytówka w najlepszej proporcji jakości do ceny",
         price: "1300zł",
         features: [
             {
@@ -133,6 +135,7 @@ export const pricing = [
     }, 
     {
         title: "Standard Plan",
+        desc: "Propozycja dla małych biznesów, które potrzebują większej ilości treści na stronie",
         price: "1900zł",
         features: [
             {
@@ -169,6 +172,7 @@ export const pricing = [
     }, 
     {
         title: "Premium Plan",
+        desc: "Oferta dla małych i średnich firm, gdzie wykonamy dla Ciebie wszystko od początku do końca i zapewnimy długoterminowe wsparcie",
         price: "2500zł",
         features: [
             {

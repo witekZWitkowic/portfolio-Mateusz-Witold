@@ -16,6 +16,7 @@ import linkedin from './linkedin.png'
 import arrow1 from './arrows/Arrow1.png'
 import arrow2 from './arrows/Arrow2.png'
 import arrow3 from './arrows/Arrow3.png'
+import diamond from './icons/diamond.png'
 
 export {
     WMlogo,
@@ -35,5 +36,6 @@ export {
     linkedin,
     arrow1,
     arrow2,
-    arrow3
+    arrow3,
+    diamond
 }
