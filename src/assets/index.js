@@ -10,6 +10,9 @@ import customoweStrony from './customoweStrony.png'
 import bulletPoint from './bulletPoint.png'
 import gotowe from './gotowe.png'
 import pracaWToku from './pracaWToku.png'
+import instagram from './instagram.png'
+import facebook from './facebook.png'
+import linkedin from './linkedin.png'
 
 export {
     WMlogo,
@@ -23,5 +26,8 @@ export {
     customoweStrony,
     bulletPoint,
     gotowe,
-    pracaWToku
+    pracaWToku,
+    facebook,
+    instagram,
+    linkedin
 }
