@@ -1,10 +1,10 @@
 import React from 'react'
-import {Navbar, About, FirstGlance, HowItsDone, Pricing} from './components'
+import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer} from './components'
 import styles from './style'
 
 const App = () => {
   return (
-    <div className='bg-primary w-full overflow-hidden'>
+    <div className='bg-page-gradient w-full overflow-hidden'>
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
@@ -29,6 +29,7 @@ const App = () => {
         <div className={`${styles.boxWidth}`}>
           <HowItsDone />
           <Pricing />
+          <Footer />
         </div>
       </div>
     </div>
