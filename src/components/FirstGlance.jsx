@@ -1,9 +1,9 @@
-import React from 'react'
 import styles from '../style'
 import {internet} from '../assets'
 import Button from './Button'
 
 const FirstGlance = () => {
+
   return (
     <section className={`flex flex-1 md:flex-row flex-col ${styles.paddingY} sm:h-[650px] h-screen`} >
         <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
@@ -18,7 +18,7 @@ const FirstGlance = () => {
           <p className='sm:text-[23px] text-[25px] sm:m-0 m-5 sm:max-w-[450px] max-w-[380px] text-center text-dimWhite'>
             Przekujemy Twoje pomysły w nowoczesną i dobrze wypozycjonowaną w Google stronę internetową.
           </p>
-          <Button name="Darmowa Wycena "/>
+          <Button name="Darmowa Wycena" />
         </div>
     </section>
   )

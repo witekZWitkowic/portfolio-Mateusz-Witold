@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer} from './components'
+import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact} from './components'
 import styles from './style'
 
 const App = () => {
@@ -29,6 +29,7 @@ const App = () => {
         <div className={`${styles.boxWidth}`}>
           <HowItsDone />
           <Pricing />
+          <Contact />
           <Footer />
         </div>
       </div>
