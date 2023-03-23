@@ -34,7 +34,14 @@ const Pricing = () => {
       <div className='flex flex-1 justify-between'>
         {pricing.map((plan, index) => (
           <ReactCardFlip isFlipped={flipped[index]} flipDirection="horizontal">
-            <div key={index+"A"} className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
+            <div key={index+"A"} className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
+              <img src={diamond} className='w-[100px] h-[100px]'/>
+              <h1 className='text-white text-[35px] font-bold text-gradient'>{plan.title}</h1>
+              <p className='text-zinc-200 text-[18px] mb-5'>{plan.desc}</p>
+              <h2 className='text-white text-[20px] font-semibold mb-5'>{plan.price}</h2>
+              <Button name="Zobacz szczegóły" onClick={() => handleClick(index)}/>
+            </div>
+            <div key={index+"B"} className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
               <h1 className='text-white text-[30px] font-bold text-gradient'>{plan.title}</h1>
               <h2 className='text-white text-[20px] font-semibold mb-5'>{plan.price}</h2>
               <ul className=''>
@@ -43,13 +50,6 @@ const Pricing = () => {
                 ))}
               </ul>
               <Button name="Powrót" onClick={() => handleClick(index)}/>
-            </div>
-            <div key={index+"B"} className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
-              <img src={diamond} className='w-[100px] h-[100px]'/>
-              <h1 className='text-white text-[35px] font-bold text-gradient'>{plan.title}</h1>
-              <p className='text-zinc-200 text-[18px] mb-5'>{plan.desc}</p>
-              <h2 className='text-white text-[20px] font-semibold mb-5'>{plan.price}</h2>
-              <Button name="Zobacz szczegóły" onClick={() => handleClick(index)}/>
             </div>
           </ReactCardFlip>
         ))}
