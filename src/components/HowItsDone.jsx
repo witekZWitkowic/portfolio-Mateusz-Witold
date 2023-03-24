@@ -22,8 +22,8 @@ const HowItsDone = () => {
                 </div>
             ))}
             <img src={arrow1} className='w-[340px] h-[340px] absolute top-[220px] left-[470px]' />
-            <img src={arrow2} className='w-[540px] h-[540px] absolute top-[560px] left-[350px]' />
-            <img src={arrow3} className='w-[540px] h-[540px] absolute top-[900px] left-[370px]' />
+            <img src={arrow2} className='w-[540px] h-[540px] absolute top-[540px] left-[350px]' />
+            <img src={arrow3} className='w-[540px] h-[540px] absolute top-[890px] left-[280px]' />
         </div>
     </section>
   )

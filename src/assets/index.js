@@ -21,6 +21,11 @@ import briefcase from './icons/briefcase.png'
 import heart from './icons/heart.png'
 import edit from './icons/edit.png'
 import paper from './icons/paper.png'
+import idea from './isometric/idea.png'
+import preview from './isometric/preview.png'
+import working from './isometric/working.png'
+import done from './isometric/done.png'
+
 
 export {
     WMlogo,
@@ -45,5 +50,9 @@ export {
     briefcase,
     heart,
     edit,
-    paper
+    paper,
+    idea,
+    preview,
+    working,
+    done
 }
