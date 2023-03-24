@@ -17,6 +17,10 @@ import arrow1 from './arrows/Arrow1.png'
 import arrow2 from './arrows/Arrow2.png'
 import arrow3 from './arrows/Arrow3.png'
 import diamond from './icons/diamond.png'
+import briefcase from './icons/briefcase.png'
+import heart from './icons/heart.png'
+import edit from './icons/edit.png'
+import paper from './icons/paper.png'
 
 export {
     WMlogo,
@@ -37,5 +41,9 @@ export {
     arrow1,
     arrow2,
     arrow3,
-    diamond
+    diamond,
+    briefcase,
+    heart,
+    edit,
+    paper
 }

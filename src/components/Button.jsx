@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({name, onClick}) => {
+const Button = ({name, onClick, customClass}) => {
   return (
-    <div className='flex items-center p-2 h-[45px] bg-blue-gradient rounded-xl mt-6 cursor-pointer' onClick={onClick}>
+    <div className={`flex align-middle justify-center px-6 pb-1 h-[45px] bg-blue-gradient rounded-xl mt-6 cursor-pointer ${customClass}`} onClick={onClick}>
         <button className='text-[20px] text-black font-semibold'>
             {name}
         </button>

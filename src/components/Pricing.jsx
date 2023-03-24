@@ -5,7 +5,7 @@ import { bulletPoint } from '../assets';
 import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
 import Button from './Button';
-import { diamond } from '../assets';
+import { diamond, briefcase, heart, edit } from '../assets';
 
 
 
@@ -28,6 +28,15 @@ const Pricing = () => {
     setFlipped(nextTable);
   }
 
+  function calculateDiscount(discount, price){
+    console.log("test");
+    if(discount == 0){
+      return (
+          <h2 className='text-white text-[20px] h-[10px] font-semibold mb-5'>{plan.price}</h2>
+      )
+    }
+  }
+
   return (
     <section className={`flex flex-col justify-between ${styles.boxWidth} my-12`}>
       <h1 className='text-center text-white text-[50px] font-bold mb-6'>Wybierz swój plan:</h1>
@@ -35,21 +44,31 @@ const Pricing = () => {
         {pricing.map((plan, index) => (
           <ReactCardFlip isFlipped={flipped[index]} flipDirection="horizontal">
             <div key={index+"A"} className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
-              <img src={diamond} className='w-[100px] h-[100px]'/>
-              <h1 className='text-white text-[35px] font-bold text-gradient'>{plan.title}</h1>
-              <p className='text-zinc-200 text-[18px] mb-5'>{plan.desc}</p>
-              <h2 className='text-white text-[20px] font-semibold mb-5'>{plan.price}</h2>
+              <img src={plan.img} className='w-[100px] h-[100px]'/>
+              <h1 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{plan.title}</h1>
+              <p className='text-zinc-200 text-[18px] h-[50px] mb-5'>{plan.desc}</p>
+              {(plan.discount == 0) ? 
+                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h2> 
+                : 
+                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{plan.price}</span></span> {plan.price * (1-(plan.discount/100))} zł</h2>
+              }
               <Button name="Zobacz szczegóły" onClick={() => handleClick(index)}/>
             </div>
             <div key={index+"B"} className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
               <h1 className='text-white text-[30px] font-bold text-gradient'>{plan.title}</h1>
-              <h2 className='text-white text-[20px] font-semibold mb-5'>{plan.price}</h2>
-              <ul className=''>
+              {(plan.discount == 0) ? 
+                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h2> 
+                : 
+                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{plan.price}</span></span> {plan.price * (1-(plan.discount/100))} zł</h2>
+              }
+              <ul className='list-disc pl-6'>
                 {plan.features.map((feature, index) => (
-                  <li key={index} className={`even:text-zinc-200 odd:text-zinc-400 hover:text-cyan-300  links mt-2 cursor-default`}>{feature.feature}</li>
+                  <li key={index} className={`even:text-zinc-100 odd:text-zinc-300 hover:text-cyan-300 mt-2 cursor-default`}>{feature.feature}</li>
                 ))}
               </ul>
-              <Button name="Powrót" onClick={() => handleClick(index)}/>
+              <div className='absolute inset-x-10 bottom-12'>
+                <Button name="Wybierz" onClick={() => handleClick(index)}/>
+              </div>
             </div>
           </ReactCardFlip>
         ))}
