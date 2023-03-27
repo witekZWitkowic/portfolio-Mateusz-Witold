@@ -9,8 +9,33 @@ import { VscChevronRight, VscChevronLeft } from "react-icons/vsc";
 const Carousell = () => {
    
     const [flipped, setFlipped] = useState(false);
-    const [pricingPlan, setPricingPlan] = useState(3);
+    const [pricingPlan, setPricingPlan] = useState(0);
     const {title, img, desc, price, discount, features} = pricing[pricingPlan];
+
+    const checkPlan = (index) => {
+        if(index > pricing.length - 1){
+            return 0;
+        }
+        if(index < 0){
+            return pricing.length - 1
+        }
+        return index;
+        
+    }
+
+    const prevPlan = () => {
+        setPricingPlan((pricingPlan) => {
+            let newPricingPlan = pricingPlan + 1;
+            return checkPlan(newPricingPlan);
+        });
+    }
+
+    const nextPlan = () => {
+        setPricingPlan((pricingPlan) => {
+            let newPricingPlan = pricingPlan - 1;
+            return checkPlan(newPricingPlan);
+        });
+    }
 
   return (
     
@@ -24,7 +49,7 @@ const Carousell = () => {
                     <h1 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{title}</h1>
                     <p className='text-zinc-200 text-[18px] h-[50px] mb-5'>{desc}</p>
                     {(discount == 0) ? 
-                        <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{price} zł</h2> 
+                        <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{pricingPlan === 0 ? price : price + " zł"}</h2> 
                         : 
                         <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{price}</span></span> {price * (1-(discount/100))} zł</h2>
                     }
@@ -33,7 +58,7 @@ const Carousell = () => {
                     <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
                     <h1 className='text-white text-[30px] font-bold text-gradient'>{title}</h1>
                     {(discount == 0) ? 
-                        <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{price}</h2> 
+                        <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{pricingPlan === 0 ? price : price + " zł"}</h2> 
                         : 
                         <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{price}</span></span> {price * (1-(discount/100))} zł</h2>
                     }
@@ -48,12 +73,12 @@ const Carousell = () => {
                     </div>
                     
                 </ReactCardFlip>
-                <div className='absolute'>
-                    <VscChevronLeft />
-                </div>
-                <div className='absolute'>
-                    <VscChevronRight />
-                </div>
+                <button onClick={nextPlan} className='w-[30px] h-[30px] bg-gray-500/[.4] rounded-full absolute top-[60%] right-[87%]'>
+                    <VscChevronLeft size={30}/>
+                </button>
+                <button onClick={prevPlan} className='w-[30px] h-[30px] bg-gray-500/[.4] rounded-full absolute top-[60%] left-[87%]'>
+                    <VscChevronRight size={30}/>
+                </button>
             </div>
         </section>
     </div>
