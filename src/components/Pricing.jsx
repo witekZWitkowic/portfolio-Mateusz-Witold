@@ -38,7 +38,7 @@ const Pricing = () => {
   }
 
   return (
-    <section className={`flex flex-col justify-between ${styles.boxWidth} my-12`}>
+    <section className={`md:flex hidden flex-col justify-between ${styles.boxWidth} my-12`}>
       <h1 className='text-center text-white text-[50px] font-bold mb-6'>Wybierz swój plan:</h1>
       <div className='flex flex-1 justify-between'>
         {pricing.map((plan, index) => (

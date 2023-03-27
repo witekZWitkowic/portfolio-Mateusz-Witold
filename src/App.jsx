@@ -1,5 +1,6 @@
 import React from 'react'
 import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact} from './components'
+import Carousell from './components/Carousell'
 import styles from './style'
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <div className={`${styles.boxWidth}`}>
           <HowItsDone />
           <Pricing />
+          <Carousell />
           <Contact />
           <Footer />
         </div>
