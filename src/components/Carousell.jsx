@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import Button from './Button';
+import { cross } from '../assets';
 import { pricing } from '../constants';
 import Pricing from './Pricing';
 import styles from  '../style';
@@ -20,9 +21,8 @@ const Carousell = () => {
             return pricing.length - 1
         }
         return index;
-        
     }
-
+    
     const prevPlan = () => {
         setPricingPlan((pricingPlan) => {
             let newPricingPlan = pricingPlan + 1;
@@ -56,6 +56,7 @@ const Carousell = () => {
                     <Button name="Zobacz szczegóły" onClick={() => setFlipped(current => !current)}/>
                     </div>
                     <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
+                    <img src={cross} onClick={() => setFlipped(current => !current)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
                     <h1 className='text-white text-[30px] font-bold text-gradient'>{title}</h1>
                     {(discount == 0) ? 
                         <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{pricingPlan === 0 ? price : price + " zł"}</h2> 
