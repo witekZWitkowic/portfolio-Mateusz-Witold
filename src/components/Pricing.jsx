@@ -42,8 +42,8 @@ const Pricing = () => {
       <h1 className='text-center text-white text-[50px] font-bold mb-6'>Wybierz swój plan:</h1>
       <div className='flex flex-1 justify-between'>
         {pricing.map((plan, index) => (
-          <ReactCardFlip isFlipped={flipped[index]} flipDirection="horizontal">
-            <div key={index+"A"} className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
+          <ReactCardFlip key={index+"A"} isFlipped={flipped[index]} flipDirection="horizontal">
+            <div className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
               <img src={plan.img} className='w-[100px] h-[100px]'/>
               <h1 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{plan.title}</h1>
               <p className='text-zinc-200 text-[18px] h-[50px] mb-5'>{plan.desc}</p>
@@ -54,7 +54,7 @@ const Pricing = () => {
               }
               <Button name="Zobacz szczegóły" onClick={() => handleClick(index)}/>
             </div>
-            <div key={index+"B"} className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
+            <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
               <h1 className='text-white text-[30px] font-bold text-gradient'>{plan.title}</h1>
               {(plan.discount == 0) ? 
                 <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h2> 
