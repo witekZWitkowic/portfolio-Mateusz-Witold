@@ -5,7 +5,7 @@ import { bulletPoint } from '../assets';
 import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
 import Button from './Button';
-import { diamond, briefcase, heart, edit } from '../assets';
+import { diamond, briefcase, heart, edit, cross } from '../assets';
 
 
 
@@ -55,6 +55,7 @@ const Pricing = () => {
               <Button name="Zobacz szczegóły" onClick={() => handleClick(index)}/>
             </div>
             <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
+              <img src={cross} onClick={() => handleClick(index)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
               <h1 className='text-white text-[30px] font-bold text-gradient'>{plan.title}</h1>
               {(plan.discount == 0) ? 
                 <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h2> 
@@ -67,7 +68,7 @@ const Pricing = () => {
                 ))}
               </ul>
               <div className='absolute inset-x-10 bottom-12'>
-                <Button name="Wybierz" onClick={() => handleClick(index)}/>
+                <Button name="Wybierz"/>
               </div>
             </div>
           </ReactCardFlip>
