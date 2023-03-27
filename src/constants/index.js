@@ -1,4 +1,4 @@
-import { pozycjonowanie, customoweStrony, supportt, gotowe, pracaWToku } from '../assets'
+import { pozycjonowanie, customoweStrony, supportt, gotowe, pracaWToku, briefcase, diamond, heart, edit, paper, idea, preview, working, done } from '../assets'
 
 export const navLinks = [
     {
@@ -60,152 +60,149 @@ export const howItsDone = [
     {
         title: "Przedstawiasz swój pomysł",
         description: "Konsultujemy się z Tobą i uważnie słuchamy Twoich potrzeb jakie masz względem swojej strony. Doradzamy również jakie rozwiązania mogą zostać zaimplementowane, żeby Twoja strona internetowa była stworzona idealnie pod Ciebie!",
-        img: pracaWToku
+        img: idea
     },
     {
         title: "Tworzymy wizualizację",
         description: "Posługując się najnowszymi technologiami upewniamy się, że produkt, który będzie dla Ciebie tworzony, spełni wszystkie Twoje wymagania i będziesz miło zaskoczony finalnym wyglądem oraz funkcjonalnością  Twojej strony internetowej.",
-        img: gotowe
+        img: preview
     },
     {
         title: "Pracujemy nad Twoją stroną",
         description: "Wracasz do swojej pracy, w której jesteś ekspertem, a w międzyczasie powstaje twoja indywidualna strona internetowa, która wypozycjonuje Twój biznes w Google, oraz przekaże potencjalnym klientom wszystkie potrzebne informacje do kontaktu z Tobą.",
-        img: pracaWToku
+        img: working
     },
     {
         title: "Gotowe!",
         description: "Twój biznes jest już widoczny w sieci! Twoja strona jest Twoją indywidualną wizytówką, którą możesz się posługiwać w internecie oraz poza nim. Dzięki nowoczesnemu wyglądowi oraz funkcjonalności Twojej witryny masz pewność, że jesteś odbierany jako ekspert i profesjonalista w Swojej branży!",
-        img: gotowe
+        img: done
     },
 ]
 
 export const pricing = [
     {
         title: "Edycja Strony",
-        price: "Do ustalenia",
+        img: edit,
+        desc: "Masz już stronę, którą należy usprawnić, lub zmodernizować? Ta oferta jest dla Ciebie",
+        price: "Wycena indywidualna",
+        discount: 0,
         features: [
             {
-                feature: "WordPress/React.js"
+                feature: "Edycja strony według potrzeb"
+            },
+            {
+                feature: "Optymalizacja treści"
             },
             {
                 feature: "Podstawowe SEO"
             },
             {
-                feature: "Google Analytics (WordPress Only)"
+                feature: "Google Analytics"
             },
             {
-                feature: "Wsparcie przez miesiąc ZA DARMO."
+                feature: "Wsparcie przez miesiąc GRATIS"
             },
         ]
     }, 
     {
         title: "Basic Plan",
-        price: "1300zł",
+        img: paper,
+        desc: "Strona-wizytówka w najlepszej proporcji jakości do ceny",
+        price: 1300,
+        discount: 25,
         features: [
             {
                 feature: "Własna Domena"
             },
             {
-                feature: "Roczny Hosting"
+                feature: "Roczny hosting i certyfikat SSL"
             },
             {
-                feature: "Certyfikat SSL"
+                feature: "Firmowy mail"
             },
             {
-                feature: "Firmowy Mail"
-            },
-            {
-                feature: "WordPress/React.js"
-            },
-            {
-                feature: "Bez Podstron"
+                feature: "Bez podstron"
             },
             {
                 feature: "Podstawowe SEO"
             },
             {
-                feature: "Google Analytics (WordPress Only)"
+                feature: "Google Analytics"
             },
             {
-                feature: "Wsparcie przez miesiąc ZA DARMO."
+                feature: "Wsparcie miesiąc GRATIS"
             },
         ]
     }, 
     {
         title: "Standard Plan",
-        price: "1900zł",
+        img: briefcase,
+        desc: "Propozycja dla małych biznesów, które potrzebują większej ilości treści na stronie",
+        price: 1900,
+        discount: 10,
         features: [
             {
-                feature: "Własna Domena"
+                feature: "Własna domena"
             },
             {
-                feature: "Roczny Hosting"
+                feature: "Roczny hosting i certyfikat SSL"
             },
             {
-                feature: "Certyfikat SSL"
+                feature: "5 firmowych maili"
             },
             {
-                feature: "5 Firmowych Maili"
-            },
-            {
-                feature: "WordPress/React.js"
-            },
-            {
-                feature: "Do 5ciu Podstron"
+                feature: "Do pięciu podstron"
             },
             {
                 feature: "Podstawowe SEO"
             },
             {
-                feature: "Google Analytics (WordPress Only)"
+                feature: "Google Analytics"
             },
             {
-                feature: "Wsparcie przez 2 miesiące ZA DARMO."
+                feature: "Wsparcie 2 miesiące GRATIS"
             },
             {
-                feature: "Formularz Kontaktowy"
+                feature: "Formularz kontaktowy"
             },
         ]
     }, 
     {
         title: "Premium Plan",
-        price: "2500zł",
+        img: diamond,
+        desc: "Okazała strona dla małych i średnich biznesów oraz długoterminowe wsparcie",
+        price: 2500,
+        discount: 0,
         features: [
             {
-                feature: "Własna Domena"
+                feature: "Własna domena"
             },
             {
-                feature: "Roczny Hosting"
+                feature: "Roczny hosting i certyfikat SSL"
             },
             {
-                feature: "Certyfikat SSL"
+                feature: "Dowolna ilość firmowych maili"
             },
             {
-                feature: "X Firmowych Maili"
-            },
-            {
-                feature: "WordPress/React.js"
-            },
-            {
-                feature: "Bez Limitu Podstron"
+                feature: "Bez limitu podstron"
             },
             {
                 feature: "Podstawowe SEO"
             },
             {
-                feature: "Google Analytics (WordPress Only)"
+                feature: "Google Analytics"
             },
             {
-                feature: "Wsparcie przez 6 miesięcy ZA DARMO."
+                feature: "Wsparcie 6 miesięcy GRATIS"
             },
             {
-                feature: "Formularz Kontaktowy"
+                feature: "Formularz kontaktowy"
             },
             {
                 feature: "Anglojęzyczna wersja strony"
             },
             {
-                feature: "Facebook Chat"
+                feature: "Zintegrowany Facebook chat"
             },
         ]
     }, 
