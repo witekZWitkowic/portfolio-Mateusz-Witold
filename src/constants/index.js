@@ -59,12 +59,12 @@ export const about = [
 export const howItsDone = [
     {
         title: "Przedstawiasz swój pomysł",
-        description: "Konsultujemy się z Tobą i uważnie słuchamy Twoich potrzeb jakie masz względem swojej strony. Doradzamy również jakie rozwiązania mogą zostać zaimplementowane, żeby Twoja strona internetowa była stworzona idealnie pod Ciebie!",
+        description: "Konsultujemy się z Tobą i uważnie słuchamy Twoich potrzeb jakie masz względem swojej strony. Doradzamy również jakie rozwiązania mogą zostać zaimplementowane, żeby Twoja strona internetowa była stworzona idealnie pod Ciebie i Twoich klientów!",
         img: idea
     },
     {
         title: "Tworzymy wizualizację",
-        description: "Posługując się najnowszymi technologiami upewniamy się, że produkt, który będzie dla Ciebie tworzony, spełni wszystkie Twoje wymagania i będziesz miło zaskoczony finalnym wyglądem oraz funkcjonalnością  Twojej strony internetowej.",
+        description: "Posługując się najnowszymi technologiami upewniamy się, że produkt, który będzie dla Ciebie tworzony, spełni wszystkie Twoje wymagania i będziesz miło zaskoczony finalnym wyglądem oraz funkcjonalnością Twojej witryny internetowej.",
         img: preview
     },
     {
@@ -74,7 +74,7 @@ export const howItsDone = [
     },
     {
         title: "Gotowe!",
-        description: "Twój biznes jest już widoczny w sieci! Twoja strona jest Twoją indywidualną wizytówką, którą możesz się posługiwać w internecie oraz poza nim. Dzięki nowoczesnemu wyglądowi oraz funkcjonalności Twojej witryny masz pewność, że jesteś odbierany jako ekspert i profesjonalista w Swojej branży!",
+        description: "Twój biznes jest już widoczny w sieci! Twoja strona jest wizytówką Twojego biznesu, którą możesz się posługiwać w internecie oraz poza nim. Dzięki nowoczesnemu wyglądowi oraz funkcjonalności Twojej witryny masz pewność, że jesteś odbierany jako ekspert i profesjonalista w swojej branży!",
         img: done
     },
 ]
