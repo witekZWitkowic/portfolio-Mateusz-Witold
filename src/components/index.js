@@ -6,6 +6,7 @@ import Portfolio from "./Portfolio";
 import Pricing from "./Pricing";
 import FirstGlance from "./FirstGlance";
 import HowItsDone from "./HowItsDone";
+import Popup from "./Popup";
 
 export {
     About,
@@ -15,5 +16,6 @@ export {
     Portfolio,
     Pricing,
     FirstGlance,
-    HowItsDone
+    HowItsDone,
+    Popup
 }

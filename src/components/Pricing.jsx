@@ -10,7 +10,13 @@ import { diamond, briefcase, heart, edit, cross } from '../assets';
 
 
 
-const Pricing = () => {
+const Pricing = (props) => {
+
+  const {planChoosed, setPlanChoosed} = props;
+
+  function choosePlan(plan){
+    setPlanChoosed(plan);
+  }
 
   const initial = [];
   for(let i = 0; i<pricing.length; i++) initial[i] = false;
@@ -68,7 +74,7 @@ const Pricing = () => {
                 ))}
               </ul>
               <div className='absolute inset-x-10 bottom-12'>
-                <Button name="Wybierz"/>
+                <Button name="Wybierz" onClick={() => choosePlan(plan.title)}/>
               </div>
             </div>
           </ReactCardFlip>

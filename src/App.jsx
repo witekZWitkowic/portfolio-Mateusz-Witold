@@ -1,11 +1,14 @@
 import React from 'react'
-import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact} from './components'
+import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup} from './components'
 import Carousell from './components/Carousell'
 import styles from './style'
+import { useState } from 'react';
 
 const App = () => {
+  const[planChoosed,setPlanChoosed] = useState("");
   return (
     <div className='bg-page-gradient w-full overflow-hidden'>
+      <Popup planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
@@ -29,7 +32,7 @@ const App = () => {
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <HowItsDone />
-          <Pricing />
+          <Pricing planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
           <Carousell />
           <Contact />
           <Footer />
