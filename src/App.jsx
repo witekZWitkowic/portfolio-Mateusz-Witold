@@ -3,8 +3,12 @@ import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup}
 import Carousell from './components/Carousell'
 import styles from './style'
 import { useState } from 'react';
+import ReactGA from 'react-ga';
+
 
 const App = () => {
+  const TRACKING_ID = "G-C2R75NVN3S"; // OUR_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
   const[planChoosed,setPlanChoosed] = useState("");
   return (
     <div className='bg-page-gradient w-full overflow-hidden'>

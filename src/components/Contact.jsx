@@ -3,9 +3,11 @@ import Button from './Button'
 import Textarea from './Textarea'
 import Input from './Input'
 import styles from '../style'
+import AnalyticsTracker from './AnalyticsTracker'
 
 
 const Contact = () => {
+  const gaEventTracker = AnalyticsTracker("Contacs us");
   return (
     <section className="">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-[700px]">
@@ -18,7 +20,7 @@ const Contact = () => {
             <Input type="text" forName="text" placeholderName="Napisz temat wiadomości." labelName="Temat"/>
             <Textarea forName="message" labelName="Treść wiadomości" placeholderName="Napisz treść swojej wiadomości."/>
             <div className='w-[150px] mx-auto'>
-              <Button name="Wyślij!"/>
+              <Button name="Wyślij!" onClick={() => gaEventTracker("sent")}/>
             </div>
         </form>
       </div>
