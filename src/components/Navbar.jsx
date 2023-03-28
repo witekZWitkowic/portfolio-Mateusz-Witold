@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className='sm:hidden flex flex-1 justify-end items-center m-5'>
             <img src={!openCloseNav ? menu : close} 
             onClick={() => setOpenCloseNav((prev) => !prev)} 
-            className={`${openCloseNav ? "fixed z-10" : "static"}`} />
+            className={`${openCloseNav ? "fixed z-10" : "static z-10"}`} />
             <div className={`p-6 bg-black-gradient fixed top-0 right-0 w-[100%] h-[50%] ${openCloseNav ? "sidebar" : "sidebar-out"}`}>
                 <ul className='list-none flex-col justify-end items-center flex-1 mt-10'>
                     {navLinks.map((link, index)=>(
