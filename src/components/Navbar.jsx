@@ -19,12 +19,12 @@ const Navbar = () => {
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center m-5'>
             <img src={!openCloseNav ? menu : close} 
-            onClick={() => setOpenCloseNav((prev) => !prev)}
-            />
-            <div className={`${openCloseNav ? "flex" : "hidden"} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-                <ul className='list-none flex-col justify-end items-center flex-1'>
+            onClick={() => setOpenCloseNav((prev) => !prev)} 
+            className={`${openCloseNav ? "fixed z-10" : "static"}`} />
+            <div className={`p-6 bg-black-gradient fixed top-0 right-0 w-[100%] h-[50%] ${openCloseNav ? "sidebar" : "sidebar-out"}`}>
+                <ul className='list-none flex-col justify-end items-center flex-1 mt-10'>
                     {navLinks.map((link, index)=>(
-                    <li key={link.id} className={`font-poppins text-[16px] text-white font-normal cursor-pointer ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'}`}>
+                    <li key={link.id} className={`font-poppins text-[30px] text-white font-normal cursor-pointer ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'}`}>
                         <a href={`#${link.id}`}>
                         {link.title}
                         </a>
