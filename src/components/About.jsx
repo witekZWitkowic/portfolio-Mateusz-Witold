@@ -3,7 +3,10 @@ import styles , { layout } from  '../style'
 import {about} from '../constants'
 import Button from './Button'
 
-const About = () => {
+const About = (props) => {
+
+  const {handleClickScroll} = props;
+
   return (
       <div className={`flex-1 flex sm:flex-row flex-col sm:items-baseline items-center w-full py-[100px]`}>
         <div className={`flex-1 flex flex-col justify-center md:my-0 my-10`}>
@@ -25,7 +28,7 @@ const About = () => {
           <p className='text-dimWhite max-w-[470px] sm:mb-0 mb-5'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In id dolores dignissimos soluta minima alias earum quia totam. Iure odit possimus quisquam quae! Laboriosam, dolore?
           </p>
-          <Button name="Zaprojektuj swoją stronę!"/>
+          <Button name="Wybierz plan dla siebie!" onClick={()=>handleClickScroll("pricing")}/>
         </div>
       </div>
   )
