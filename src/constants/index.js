@@ -1,4 +1,4 @@
-import { pozycjonowanie, customoweStrony, supportt, gotowe, pracaWToku, briefcase, diamond, heart, edit, paper, idea, preview, working, done } from '../assets'
+import { pozycjonowanie, customoweStrony, supportt, briefcase, diamond, edit, paper, idea, preview, working, done } from '../assets'
 
 export const navLinks = [
     {
