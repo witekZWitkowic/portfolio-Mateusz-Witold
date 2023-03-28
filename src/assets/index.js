@@ -8,8 +8,6 @@ import pozycjonowanie from './pozycjonowanie.png'
 import supportt from './supportt.png'
 import customoweStrony from './customoweStrony.png'
 import bulletPoint from './bulletPoint.png'
-import gotowe from './gotowe.png'
-import pracaWToku from './pracaWToku.png'
 import instagram from './instagram.png'
 import facebook from './facebook.png'
 import linkedin from './linkedin.png'
@@ -39,8 +37,6 @@ export {
     supportt,
     customoweStrony,
     bulletPoint,
-    gotowe,
-    pracaWToku,
     facebook,
     instagram,
     linkedin,
