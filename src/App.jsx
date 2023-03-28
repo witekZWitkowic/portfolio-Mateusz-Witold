@@ -7,16 +7,24 @@ import ReactGA from 'react-ga';
 
 
 const App = () => {
+
   const TRACKING_ID = "G-C2R75NVN3S"; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
+  
   const[planChoosed,setPlanChoosed] = useState("");
+
+  const handleClickScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  }
+  
   return (
     <div className='bg-page-gradient w-full overflow-hidden'>
       <Popup planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            <Navbar />
+            <Navbar handleClickScroll={handleClickScroll} />
           </div>
         </div>
 
@@ -36,8 +44,10 @@ const App = () => {
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <HowItsDone />
+          <div id="pricing">
           <Pricing planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
           <Carousell planChoosed={planChoosed} setPlanChoosed={setPlanChoosed}/>
+          </div>
           <Contact />
           <Footer />
         </div>

@@ -9,7 +9,7 @@ import AnalyticsTracker from './AnalyticsTracker'
 const Contact = () => {
   const gaEventTracker = AnalyticsTracker("Contacs us");
   return (
-    <section className="">
+    <section id="contact" className="">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-[700px]">
         <h2 className="mb-4 text-[48px] font-bold text-center text-gray-900 dark:text-white">Kontakt</h2>
         <p className="mb-8 lg:mb-10 text-center text-dimWhite font-light text-[15px]">

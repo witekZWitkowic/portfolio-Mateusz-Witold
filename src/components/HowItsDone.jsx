@@ -5,7 +5,7 @@ import { arrow1, arrow2, arrow3 } from '../assets'
 
 const HowItsDone = () => {
   return (
-    <section className={`flex flex-col justify-between ${styles.boxWidth}`}>
+    <section id="about" className={`flex flex-col justify-between ${styles.boxWidth}`}>
         <h1 className='text-white text-[68px] font-semibold text-center'>Jak działamy?</h1>
         <div className='flex flex-1 flex-col py-10 relative'>
             {howItsDone.map((singlePart, index) => (

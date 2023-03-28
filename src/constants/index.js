@@ -3,19 +3,23 @@ import { pozycjonowanie, customoweStrony, supportt, briefcase, diamond, edit, pa
 export const navLinks = [
     {
         id: "about",
-        title: "Web-Masters",
+        title: "O nas",
+        href: "about"
+    },
+    {
+        id: "pricing",
+        title: "Oferta",
+        href: "pricing"
     },
     {
         id: "portfolio",
         title: "Portfolio",
-    },
-    {
-        id: "pricing",
-        title: "Cennik",
+        href: "portfolio"
     },
     {
         id: "contact",
         title: "Kontakt",
+        href: "contact"
     }
 ]
 
