@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup} from './components'
+import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale} from './components'
 import Carousell from './components/Carousell'
 import styles from './style'
 import { useState } from 'react';
@@ -30,14 +30,18 @@ const App = () => {
 
         <div className={`${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            < FirstGlance />
+            <FirstGlance handleClickScroll={handleClickScroll} />
           </div>
         </div>
       </div>
-
+      {/* <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Sale />
+          </div>
+      </div> */}
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <About />
+          <About handleClickScroll={handleClickScroll} />
           </div>
       </div>
       

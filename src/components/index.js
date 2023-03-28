@@ -8,6 +8,7 @@ import FirstGlance from "./FirstGlance";
 import HowItsDone from "./HowItsDone";
 import Popup from "./Popup";
 import AnalyticsTracker from "./AnalyticsTracker";
+import Sale from "./Sale";
 
 export {
     About,
@@ -19,5 +20,6 @@ export {
     FirstGlance,
     HowItsDone,
     Popup,
-    AnalyticsTracker
+    AnalyticsTracker,
+    Sale
 }
