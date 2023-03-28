@@ -12,11 +12,7 @@ import { diamond, briefcase, heart, edit, cross } from '../assets';
 
 const Pricing = (props) => {
 
-  const {planChoosed, setPlanChoosed} = props;
-
-  function choosePlan(plan){
-    setPlanChoosed(plan);
-  }
+  const {setPlanChoosed} = props;
 
   const initial = [];
   for(let i = 0; i<pricing.length; i++) initial[i] = false;
@@ -32,15 +28,6 @@ const Pricing = (props) => {
       }
     });
     setFlipped(nextTable);
-  }
-
-  function calculateDiscount(discount, price){
-    console.log("test");
-    if(discount == 0){
-      return (
-          <h2 className='text-white text-[20px] h-[10px] font-semibold mb-5'>{plan.price}</h2>
-      )
-    }
   }
 
   return (
@@ -74,7 +61,7 @@ const Pricing = (props) => {
                 ))}
               </ul>
               <div className='absolute inset-x-10 bottom-12'>
-                <Button name="Wybierz" onClick={() => choosePlan(plan.title)}/>
+                <Button name="Wybierz" onClick={() => setPlanChoosed(plan.title)}/>
               </div>
             </div>
           </ReactCardFlip>
