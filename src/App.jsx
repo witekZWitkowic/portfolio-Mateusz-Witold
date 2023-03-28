@@ -37,7 +37,7 @@ const App = () => {
         <div className={`${styles.boxWidth}`}>
           <HowItsDone />
           <Pricing planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
-          <Carousell />
+          <Carousell planChoosed={planChoosed} setPlanChoosed={setPlanChoosed}/>
           <Contact />
           <Footer />
         </div>

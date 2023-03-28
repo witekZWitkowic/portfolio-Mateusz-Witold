@@ -7,11 +7,16 @@ import Pricing from './Pricing';
 import styles from  '../style';
 import { VscChevronRight, VscChevronLeft } from "react-icons/vsc";
 
-const Carousell = () => {
+const Carousell = (props) => {
    
     const [flipped, setFlipped] = useState(false);
     const [pricingPlan, setPricingPlan] = useState(0);
     const {title, img, desc, price, discount, features} = pricing[pricingPlan];
+    const {planChoosed, setPlanChoosed} = props;
+
+  function choosePlan(plan){
+    setPlanChoosed(plan);
+  }
 
     const checkPlan = (index) => {
         if(index > pricing.length - 1){
@@ -22,7 +27,7 @@ const Carousell = () => {
         }
         return index;
     }
-    
+
     const prevPlan = () => {
         setPricingPlan((pricingPlan) => {
             let newPricingPlan = pricingPlan + 1;
@@ -69,7 +74,7 @@ const Carousell = () => {
                         ))}
                     </ul>
                     <div className='absolute inset-x-10 bottom-12'>
-                        <Button name="Wybierz" onClick={() => handleClick(index)}/>
+                        <Button name="Wybierz" onClick={() => choosePlan(title)}/>
                     </div>
                     </div>
                     
