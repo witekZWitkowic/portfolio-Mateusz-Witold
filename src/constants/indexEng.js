@@ -1,5 +1,6 @@
     // ENGLISH VERSION // 
 
+    
     export const navLinks = [
         {
             id: "about",
