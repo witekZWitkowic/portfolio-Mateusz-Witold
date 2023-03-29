@@ -4,7 +4,7 @@ import { portfolio } from '../constants'
 const Portfolio = () => {
   return (
     <>
-    <div className='my-24'>
+    <div className={`my-24 ${(portfolio.length === 0) ? "hidden" : ""}`}>
       <h2 className='text-white text-center font-bold text-[48px]'>Nasze realizacje</h2>
       <div className='flex flex-wrap place-content-between gap-y-[50px] mt-10'>
       {portfolio.map((p, index) => (
@@ -13,7 +13,7 @@ const Portfolio = () => {
           <img src={p.img} className='border-2 border-[#34333b] cursor-pointer hover:-translate-y-1' />
           <ul className='text-white text-[12px] mt-2 flex gap-x-5 gap-y-2 justify-center flex-wrap'>
           {p.features.map((feature, index) => (
-            <li className=' bg-black-gradient-2 rounded-xl py-1 px-4'>{feature}</li>
+            <li className='bg-black-gradient-2 rounded-xl py-1 px-4'>{feature}</li>
           ))}
           </ul>
         </div>
