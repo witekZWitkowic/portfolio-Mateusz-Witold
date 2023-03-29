@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale} from './components'
+import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale, Portfolio} from './components'
 import Carousell from './components/Carousell'
 import styles from './style'
 import { useState } from 'react';
@@ -51,6 +51,7 @@ const App = () => {
             <Pricing planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
             <Carousell planChoosed={planChoosed} setPlanChoosed={setPlanChoosed}/>
           </div>
+          <Portfolio />
           <Contact />
           <Footer />
         </div>

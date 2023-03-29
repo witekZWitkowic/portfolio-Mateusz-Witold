@@ -6,6 +6,7 @@ import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
 import Button from './Button';
 import { diamond, briefcase, heart, edit, cross } from '../assets';
+import { IoDiamond } from "react-icons/io5";
 
 
 

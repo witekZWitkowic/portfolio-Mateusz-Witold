@@ -1,4 +1,4 @@
-import { pozycjonowanie, customoweStrony, supportt, briefcase, diamond, edit, paper, idea, preview, working, done } from '../assets'
+import { pozycjonowanie, customoweStrony, supportt, briefcase, diamond, edit, paper, idea, preview, working, done, wm, pin } from '../assets'
 
 export const navLinks = [
     {
@@ -113,7 +113,7 @@ export const pricing = [
         img: paper,
         desc: "Strona-wizytówka w najlepszej proporcji jakości do ceny",
         price: 1300,
-        discount: 25,
+        discount: 0,
         features: [
             {
                 feature: "Własna Domena"
@@ -143,7 +143,7 @@ export const pricing = [
         img: briefcase,
         desc: "Propozycja dla małych biznesów, które potrzebują większej ilości treści na stronie",
         price: 1900,
-        discount: 10,
+        discount: 0,
         features: [
             {
                 feature: "Własna domena"
@@ -215,24 +215,52 @@ export const pricing = [
 export const sale = {
         isActive: true,
         title: "SPRING SALE",
-        desc: "Unikatowy pakiet dla kolejnych 5 klientów:",
+        desc: "Unikatowy pakiet tylko dla kolejnych 5 klientów:",
         price: 750,
         features: [
             {
-                feature: "Edycja strony według potrzeb"
+                feature: "Własna Domena"
             },
             {
-                feature: "Optymalizacja treści"
+                feature: "Roczny hosting i certyfikat SSL"
+            },
+            {
+                feature: "Firmowy mail"
+            },
+            {
+                feature: "Single-page"
             },
             {
                 feature: "Podstawowe SEO"
             },
             {
-                feature: "Google Analytics"
-            },
-            {
-                feature: "Wsparcie przez miesiąc GRATIS"
+                feature: "Wsparcie miesiąc GRATIS"
             },
         ]
-    }
+}
+
+export const portfolio = [
+    {
+        title:"Web-Masters",
+        img:wm,
+        features:[
+            'Single-page',
+            'Formularz kontaktowy',
+            'Portfolio',
+            'Cennik'
+        ]
+    },
+    {
+        title:"Pin media",
+        img:pin,
+        features:[
+            '5 podstron',
+            'Formularz kontaktowy',
+            'Portfolio',
+            'Cennik',
+            'Analityka',
+            'Galeria zdjęć'
+        ]
+    },
+]
 

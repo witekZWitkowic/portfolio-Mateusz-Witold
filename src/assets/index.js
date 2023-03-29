@@ -24,6 +24,8 @@ import preview from './isometric/preview.png'
 import working from './isometric/working.png'
 import done from './isometric/done.png'
 import cross from './icons/x.png'
+import wm from './portfolio/wm.png'
+import pin from './portfolio/pin.png'
 
 
 export {
@@ -52,5 +54,7 @@ export {
     preview,
     working,
     done,
-    cross
+    cross,
+    wm,
+    pin
 }

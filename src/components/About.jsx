@@ -26,7 +26,7 @@ const About = (props) => {
                 My zajmiemy się stroną.
           </h2>
           <p className='md:flex hidden text-dimWhite max-w-[470px] sm:mb-0 mb-5 text-center mx-auto'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In id dolores dignissimos soluta minima alias earum quia totam. Iure odit possimus quisquam quae! Laboriosam, dolore?
+            Korzystając z Twoich wytycznych i naszego doświadczenia przygotujemy dla Ciebie nowoczesną stronę, będącą najlepszą wizytówką Twojego biznesu.
           </p>
           <div className='mx-auto'>
             <Button name="Wybierz plan dla siebie!" onClick={()=>handleClickScroll("pricing")}/>
