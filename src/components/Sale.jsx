@@ -13,7 +13,7 @@ const Sale = (props) => {
 
   return (
     <div className={`${(sale.isActive) ? "flex" : "hidden"}`}>
-      <div className={`${openCloseSale ? "fade-out" : "fade-in"}`}>
+      <div className={`${openCloseSale ? "fade-out" : "fade-in"} sm:flex hidden`}>
       <div className={`blink bg-black-gradient-2 rounded-xl text-center w-[400px] h-[200px] grid place-content-center fixed top-[40%] z-[9] left-[-22rem] cursor-pointer`} onClick={()=>{setOpenCloseSale(true);setInitSale(false)}}>
         <h2 className='text-gradient font-bold text-[24px] -rotate-90 relative right-[-175px]'>{sale.title}</h2>
       </div>
