@@ -30,13 +30,13 @@ const App = () => {
 
         <div className={`${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            <FirstGlance handleClickScroll={handleClickScroll} />
+            <FirstGlance setPlanChoosed={setPlanChoosed} />
           </div>
         </div>
       </div>
       {/* <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Sale />
+          <Sale setPlanChoosed={setPlanChoosed} />
           </div>
       </div> */}
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>

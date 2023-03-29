@@ -211,3 +211,26 @@ export const pricing = [
         ]
     }, 
 ]
+
+export const sale = {
+        title: "SPRING SALE",
+        desc: "Unikatowy pakiet dla kolejnych 5 klientów:",
+        price: "Wycena indywidualna",
+        features: [
+            {
+                feature: "Edycja strony według potrzeb"
+            },
+            {
+                feature: "Optymalizacja treści"
+            },
+            {
+                feature: "Podstawowe SEO"
+            },
+            {
+                feature: "Google Analytics"
+            },
+            {
+                feature: "Wsparcie przez miesiąc GRATIS"
+            },
+        ]
+    }
