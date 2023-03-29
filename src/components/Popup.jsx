@@ -24,7 +24,7 @@ const Popup = (props) => {
                 <Input type="tel" forName="tel" placeholderName="Wprowadź swój numer telefonu" labelName="Numer telefonu"/>
                 <Textarea forName="message" labelName="Dodatkowe informacje" placeholderName="Masz dla nas dodatkowe pytania, bądź informację? Dodaj je tutaj"/>
                 <div className='w-[150px] mx-auto'>
-                <Button name="Wyślij!"/>
+                  <Button name="Wyślij!"/>
                 </div>
             </form>
         </div>
