@@ -16,7 +16,7 @@ const HowItsDone = () => {
                         </h2>
                         <p className='text-dimWhite max-w-[480px] sm:block hidden'>{singlePart.description}</p>
                     </div>
-                    <div className={`flex-1 flex flex-col items-center justify-center md:my-0 my-10`}>
+                    <div className={`flex-1 flex flex-col items-center justify-center sm:my-0 my-[-50px]`}>
                         <img src={singlePart.img} className='w-[300px] h-[300px]'/>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ const FirstGlance = (props) => {
             
         </div>
         <div className={`flex-1 flex flex-col items-center justify-center md:my-0 my-10`}>
-          <p className='sm:text-[23px] text-[25px] sm:m-0 m-5 sm:max-w-[450px] max-w-[380px] text-center text-dimWhite'>
+          <p className='md:flex sm:hidden sm:text-[23px] text-[25px] sm:m-0 m-5 sm:max-w-[450px] max-w-[380px] text-center text-dimWhite'>
             Przekujemy Twoje pomysły w nowoczesną i dobrze wypozycjonowaną w Google stronę internetową.
           </p>
           <Button name="Darmowa wycena" onClick={() => setPlanChoosed("Darmowa wycena")} />

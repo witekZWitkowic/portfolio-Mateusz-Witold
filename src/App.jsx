@@ -34,11 +34,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      {/* <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Sale setPlanChoosed={setPlanChoosed} />
-          </div>
-      </div> */}
+
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <About handleClickScroll={handleClickScroll} />
@@ -48,9 +44,9 @@ const App = () => {
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <HowItsDone />
-          <div id="pricing">
-          <Pricing planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
-          <Carousell planChoosed={planChoosed} setPlanChoosed={setPlanChoosed}/>
+          <div id="pricing" className='mt-6'>
+            <Pricing planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
+            <Carousell planChoosed={planChoosed} setPlanChoosed={setPlanChoosed}/>
           </div>
           <Contact />
           <Footer />
