@@ -213,9 +213,10 @@ export const pricing = [
 ]
 
 export const sale = {
+        isActive: true,
         title: "SPRING SALE",
         desc: "Unikatowy pakiet dla kolejnych 5 klientów:",
-        price: "Wycena indywidualna",
+        price: 750,
         features: [
             {
                 feature: "Edycja strony według potrzeb"

@@ -35,6 +35,9 @@ const App = () => {
         </div>
       </div>
 
+      <Sale setPlanChoosed={setPlanChoosed} />
+
+
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <About handleClickScroll={handleClickScroll} />
