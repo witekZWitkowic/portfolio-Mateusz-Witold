@@ -1,5 +1,4 @@
 import styles from '../style'
-import {internet} from '../assets'
 import Button from './Button'
 
 const FirstGlance = (props) => {

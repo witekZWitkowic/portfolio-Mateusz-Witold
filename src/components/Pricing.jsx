@@ -1,15 +1,10 @@
 import React from 'react'
 import { pricing } from '../constants'
 import styles from '../style';
-import { bulletPoint } from '../assets';
 import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
 import Button from './Button';
-import { diamond, briefcase, heart, edit, cross } from '../assets';
-import { IoDiamond } from "react-icons/io5";
-
-
-
+import { cross } from '../assets';
 
 const Pricing = (props) => {
 

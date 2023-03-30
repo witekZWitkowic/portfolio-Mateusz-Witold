@@ -1,16 +1,20 @@
 import React from 'react'
-import { useState } from 'react';
 import Textarea from './Textarea'
 import Input from './Input'
 import Button from './Button'
 import { cross } from '../assets';
 
 const Popup = (props) => {
-    const {planChoosed, setPlanChoosed} = props;
+  const {planChoosed, setPlanChoosed} = props;
   
   function handleClick (e) {
-    if(e.target.id === "outerPopup" || e.target.id === "crossPopup" )setPlanChoosed("");
+    if(e.target.id === "outerPopup" || e.target.id === "crossPopup" ){
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
+      setPlanChoosed("");
+    }
   }
+
+  if(planChoosed)document.getElementsByTagName("body")[0].style.overflow = "hidden";
 
   return (
     <div id="outerPopup" onClick={handleClick} className={`fixed inset-0 z-10 w-full h-full bg-black bg-opacity-70 backdrop-blur-sm ${(planChoosed === "") ? "hidden" : "block"} flex items-center justify-center`}>

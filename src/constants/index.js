@@ -11,11 +11,11 @@ export const navLinks = [
         title: "Oferta",
         href: "pricing"
     },
-    {
-        id: "portfolio",
-        title: "Portfolio",
-        href: "portfolio"
-    },
+    // {
+    //     id: "portfolio",
+    //     title: "Portfolio",
+    //     href: "portfolio"
+    // },
     {
         id: "contact",
         title: "Kontakt",
@@ -250,27 +250,5 @@ export const portfolio = [
     //         ''
     //     ]
     // },
-    {
-        title:"Web-Masters",
-        img:wm,
-        features:[
-            'Single-page',
-            'Formularz kontaktowy',
-            'Portfolio',
-            'Cennik'
-        ]
-    },
-    {
-        title:"Pin media",
-        img:pin,
-        features:[
-            '5 podstron',
-            'Formularz kontaktowy',
-            'Portfolio',
-            'Cennik',
-            'Analityka',
-            'Galeria zdjęć'
-        ]
-    },
 ]
 

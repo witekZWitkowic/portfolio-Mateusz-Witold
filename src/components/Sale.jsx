@@ -1,6 +1,4 @@
 import React from 'react'
-import styles , { layout } from  '../style'
-import {about} from '../constants'
 import Button from './Button'
 import { sale } from '../constants'
 import { useState } from 'react';

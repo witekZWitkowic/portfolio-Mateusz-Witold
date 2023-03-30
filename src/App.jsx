@@ -24,7 +24,7 @@ const App = () => {
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            <Navbar handleClickScroll={handleClickScroll} />
+            <Navbar handleClickScroll={handleClickScroll} setPlanChoosed={setPlanChoosed} />
           </div>
         </div>
 

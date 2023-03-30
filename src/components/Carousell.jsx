@@ -3,7 +3,6 @@ import ReactCardFlip from 'react-card-flip';
 import Button from './Button';
 import { cross } from '../assets';
 import { pricing } from '../constants';
-import Pricing from './Pricing';
 import styles from  '../style';
 import { VscChevronRight, VscChevronLeft } from "react-icons/vsc";
 

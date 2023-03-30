@@ -1,5 +1,4 @@
 import React from 'react'
-import styles , { layout } from  '../style'
 import {about} from '../constants'
 import Button from './Button'
 
@@ -21,7 +20,7 @@ const About = (props) => {
           ))}
         </div>
         <div className={`flex-1 flex flex-col sm:items-start items-center justify-center md:my-0 my-10`}>
-          <h2 className='text-white sm:text-[58px] text-[48px] font-semibold sm:mb-3 mb-12 text-center'>
+          <h2 className='text-white md:text-[58px] text-[48px] font-semibold sm:mb-3 mb-12 text-center'>
                 Ty prowadź swój biznes, <br className='sm:block hidden'/> {" "}
                 My zajmiemy się stroną.
           </h2>

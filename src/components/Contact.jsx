@@ -2,7 +2,6 @@ import React from 'react'
 import Button from './Button'
 import Textarea from './Textarea'
 import Input from './Input'
-import styles from '../style'
 import AnalyticsTracker from './AnalyticsTracker'
 
 
