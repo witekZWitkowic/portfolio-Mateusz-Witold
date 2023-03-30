@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <section id="contact" className="">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-[700px]">
-        <h2 className="mb-4 text-[48px] font-bold text-center text-gray-900 dark:text-white">Kontakt</h2>
+        <h2 className="mb-4 text-[48px] font-bold text-center text-white">Kontakt</h2>
         <p className="mb-8 lg:mb-10 text-center text-dimWhite font-light text-[15px]">
           Masz jakieś pytania? Z chęcią na nie odpowiemy!
         </p>

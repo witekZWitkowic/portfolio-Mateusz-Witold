@@ -5,6 +5,7 @@ import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
 import Button from './Button';
 import { cross } from '../assets';
+import ReactGA from 'react-ga4';
 
 const Pricing = (props) => {
 
@@ -16,6 +17,10 @@ const Pricing = (props) => {
   const [flipped, setFlipped] = useState(initial);
   
   function handleClick (index) {
+    ReactGA.event({
+      category:"Pricing", 
+      action: pricing[index].title
+    });
     const nextTable = flipped.map((c, i) => {
       if (i === index) {
         return !c;

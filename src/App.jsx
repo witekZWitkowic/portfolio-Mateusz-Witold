@@ -2,21 +2,28 @@ import React from 'react'
 import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale, Portfolio} from './components'
 import Carousell from './components/Carousell'
 import styles from './style'
-import { useState } from 'react';
-import ReactGA from 'react-ga';
+import { useState, useEffect } from 'react';
+import ReactGA from 'react-ga4';
 
 
 const App = () => {
 
-  const TRACKING_ID = "G-C2R75NVN3S"; // OUR_TRACKING_ID
-  ReactGA.initialize(TRACKING_ID);
+  ReactGA.initialize("G-0R0SY0R690");
   
   const[planChoosed,setPlanChoosed] = useState("");
 
   const handleClickScroll = (id) => {
+    ReactGA.event({
+      category:"Menu", 
+      action: id, 
+    });
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   }
+
+  // useEffect(()=>{
+  //   ReactGA.pageview(window.location.pathname);
+  // }, []);
   
   return (
     <div className='bg-page-gradient w-full overflow-hidden'>
