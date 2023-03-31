@@ -286,3 +286,39 @@
   -o-animation: blink 3.0s linear infinite;
   animation: blink 3.0s linear infinite;
 }
+
+
+.showCookies {
+  transform: translateY(100%);
+  animation: slide-cookie .5s ease-in 3s;
+  animation-fill-mode: forwards;
+}
+.hideCookies {
+  transform: translateY(0);
+  animation: slide-cookieDown .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-cookie {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+}
+
+@keyframes slide-cookieDown {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  
+}

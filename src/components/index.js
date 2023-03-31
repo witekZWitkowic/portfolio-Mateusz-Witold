@@ -9,6 +9,7 @@ import HowItsDone from "./HowItsDone";
 import Popup from "./Popup";
 import AnalyticsTracker from "./AnalyticsTracker";
 import Sale from "./Sale";
+import CookieReminder from "./CookieReminder";
 
 export {
     About,
@@ -21,5 +22,6 @@ export {
     HowItsDone,
     Popup,
     AnalyticsTracker,
-    Sale
+    Sale,
+    CookieReminder
 }

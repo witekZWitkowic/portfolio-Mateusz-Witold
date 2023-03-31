@@ -1,5 +1,7 @@
 import React from 'react'
-import { linkedin,facebook,instagram } from '../assets'
+import {BsInstagram, BsLinkedin} from 'react-icons/bs'
+import {GrFacebook} from 'react-icons/gr'
+
 const Footer = () => {
   return (
     <section className='w-full flex flex-col pt-10'>
@@ -9,9 +11,9 @@ const Footer = () => {
           <h2 className='text-gradient'>&#174; Web-Masters.pl </h2>
         </div>
         <div className='flex'>
-          <img src={instagram} className='mr-4'/>
-          <img src={linkedin} className='mr-4'/>
-          <img src={facebook}/>
+          <BsInstagram size="25" className='mr-4 text-teal-400'/>
+          <BsLinkedin size="25"  className='mr-4 text-teal-400'/>
+          <GrFacebook size="25" className='text-teal-400'/>
         </div>
       </div>
     </section>
