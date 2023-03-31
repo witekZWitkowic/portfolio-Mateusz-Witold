@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import Textarea from './Textarea'
 import Input from './Input'
 import Button from './Button'
 import { cross } from '../assets';
+import ReactGA from 'react-ga4';
+import emailjs from '@emailjs/browser';
 
 const Popup = (props) => {
   const {planChoosed, setPlanChoosed} = props;
@@ -14,6 +16,23 @@ const Popup = (props) => {
     }
   }
 
+  const popupForm = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    ReactGA.event({
+      category:"Email", 
+      action: "Popup form email"
+    });
+
+    emailjs.sendForm('service_contactForm_WM', 'template_wm', popupForm.current, 'LbjIHyDLBTMjgCzYg');
+
+    document.getElementById('popupForm').reset();
+
+    document.getElementsByTagName("body")[0].style.overflow = "auto";
+    setPlanChoosed("");
+  };
+
   if(planChoosed)document.getElementsByTagName("body")[0].style.overflow = "hidden";
 
   return (
@@ -22,12 +41,15 @@ const Popup = (props) => {
             <img src={cross} id="crossPopup" onClick={handleClick} className='w-[25px] h-[25px] absolute right-5 top-5 cursor-pointer'/>
             <h1 className='text-white text-[32px] my-5'>Wybrany plan: <span className='text-white text-[30px] font-bold text-gradient'>{planChoosed}</span></h1>
             <h2 className='text-white sm:text-[20px] text-[16px] mb-7'>Potrzebujemy jeszcze kilka informacji, <br/> abyśmy mogli się z tobą skontaktować</h2>
-            <form action="#" className="space-y-4">
-                <input type="hidden" name="plan" value={planChoosed} />
-                <Input type="email" forName="email" placeholderName="Napisz swój email." labelName="E-mail"/>
-                <Input type="tel" forName="tel" placeholderName="Wprowadź swój numer telefonu" labelName="Numer telefonu"/>
+            <form ref={popupForm} id="popupForm" onSubmit={sendEmail} className="space-y-4">
+                <input type="hidden" name="subject" value={planChoosed} />
+                <Input type="email" forName="email" placeholderName="Napisz swój adres email." labelName="Adres e-mail" name="email"/>
+                <div className='flex flex-col mx-auto'>
+                  <label htmlFor="telPop" className="block mb-1 text-[18px] font-medium text-white">Numer telefonu (opcjonalnie)</label>
+                  <input type="text" id="telPop" name="tel" className="shadow-sm bg-black-gradient border border-teal-300 text-white outline-none text-sm rounded-lg focus:border-teal-600 block p-2.5 " placeholder="Wprowadź numer telefonu" />
+                </div>
                 <Textarea forName="message" labelName="Dodatkowe informacje" placeholderName="Masz dla nas dodatkowe pytania, bądź informację? Dodaj je tutaj"/>
-                <div className='w-[150px] mx-auto'>
+                <div className='w-[150px] mx-auto' name="message">
                   <Button name="Wyślij!"/>
                 </div>
             </form>
