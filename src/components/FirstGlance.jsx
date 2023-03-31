@@ -1,8 +1,16 @@
 import styles from '../style'
 import Button from './Button'
+import ReactGA from 'react-ga4';
 
 const FirstGlance = (props) => {
   const {setPlanChoosed} = props;
+
+  function analytics(){
+    ReactGA.event({
+      category:"Darmowa wycena", 
+      action: "Darmowa wycena"
+    });
+  }
 
   return (
     <section className={`flex flex-1 md:flex-row flex-col ${styles.paddingY} sm:h-[650px] h-screen`} >
@@ -18,7 +26,7 @@ const FirstGlance = (props) => {
           <p className='md:flex sm:hidden sm:text-[23px] text-[25px] sm:m-0 m-5 sm:max-w-[450px] max-w-[380px] text-center text-dimWhite'>
             Przekujemy Twoje pomysły w nowoczesną i dobrze wypozycjonowaną w Google stronę internetową.
           </p>
-          <Button name="Darmowa wycena" onClick={() => setPlanChoosed("Darmowa wycena")} />
+          <Button name="Darmowa wycena" onClick={() => {setPlanChoosed("Darmowa wycena");analytics()}} />
         </div>
     </section>
   )

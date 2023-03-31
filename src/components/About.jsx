@@ -1,10 +1,18 @@
 import React from 'react'
 import {about} from '../constants'
 import Button from './Button'
+import ReactGA from 'react-ga4';
 
 const About = (props) => {
 
   const {handleClickScroll} = props;
+
+  function analytics(){
+    ReactGA.event({
+      category:"About us price check", 
+      action: "About us price check"
+    });
+  }
 
   return (
       <div className={`flex-1 flex sm:flex-row flex-col items-center w-full py-[100px]`}>
@@ -28,7 +36,7 @@ const About = (props) => {
             Korzystając z Twoich wytycznych i naszego doświadczenia przygotujemy dla Ciebie nowoczesną stronę, będącą najlepszą wizytówką Twojego biznesu.
           </p>
           <div className='mx-auto'>
-            <Button name="Wybierz plan dla siebie!" onClick={()=>handleClickScroll("pricing")}/>
+            <Button name="Wybierz plan dla siebie!" onClick={()=>{handleClickScroll("pricing");analytics()}}/>
           </div>
           
         </div>

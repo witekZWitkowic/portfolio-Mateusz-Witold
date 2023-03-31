@@ -3,11 +3,19 @@ import Button from './Button'
 import { sale } from '../constants'
 import { useState } from 'react';
 import { cross } from '../assets'
+import ReactGA from 'react-ga4';
 
 const Sale = (props) => {
   const {setPlanChoosed} = props;
   const [openCloseSale, setOpenCloseSale] = useState(false);
   const [initSale, setInitSale] = useState(true);
+
+  function analytics(){
+    ReactGA.event({
+      category:"Sale", 
+      action: "Sale check"
+    });
+  }
 
   return (
     <div className={`${(sale.isActive) ? "flex" : "hidden"}`}>
@@ -28,7 +36,7 @@ const Sale = (props) => {
           </ul>
           <h4 className='text-white text-[32px] h-[25px] my-3 font-semibold mb-5'>{sale.price} zł</h4>
           <div className='w-[200px] m-auto'>
-            <Button name="WYBIERZ" onClick={() => setPlanChoosed(`${sale.title} PLAN`)} />
+            <Button name="WYBIERZ" onClick={() => {setPlanChoosed(`${sale.title} PLAN`);analytics()}} />
           </div>
         </div>
       </div>

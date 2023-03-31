@@ -17,10 +17,6 @@ const Pricing = (props) => {
   const [flipped, setFlipped] = useState(initial);
   
   function handleClick (index) {
-    ReactGA.event({
-      category:"Pricing", 
-      action: pricing[index].title
-    });
     const nextTable = flipped.map((c, i) => {
       if (i === index) {
         return !c;
@@ -29,6 +25,13 @@ const Pricing = (props) => {
       }
     });
     setFlipped(nextTable);
+  }
+
+  function analytics(index){
+    ReactGA.event({
+      category:"Pricing", 
+      action: pricing[index].title
+    });
   }
 
   return (
@@ -46,7 +49,7 @@ const Pricing = (props) => {
                 : 
                 <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{plan.price}</span></span> {plan.price * (1-(plan.discount/100))} zł</h2>
               }
-              <Button name="Zobacz szczegóły" onClick={() => handleClick(index)}/>
+              <Button name="Zobacz szczegóły" onClick={() => {handleClick(index);analytics(index)}}/>
             </div>
             <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
               <img src={cross} onClick={() => handleClick(index)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
