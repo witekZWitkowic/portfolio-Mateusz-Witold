@@ -112,7 +112,7 @@ export const pricing = [
         title: "Basic Plan",
         img: paper,
         desc: "Strona-wizytówka w najlepszej proporcji jakości do ceny",
-        price: 1300,
+        price: "od " + 1299,
         discount: 0,
         features: [
             {
@@ -142,7 +142,7 @@ export const pricing = [
         title: "Standard Plan",
         img: briefcase,
         desc: "Propozycja dla małych biznesów, które potrzebują większej ilości treści na stronie",
-        price: 1900,
+        price: "od " + 1899,
         discount: 0,
         features: [
             {
@@ -175,7 +175,7 @@ export const pricing = [
         title: "Premium Plan",
         img: diamond,
         desc: "Okazała strona dla małych i średnich biznesów oraz długoterminowe wsparcie",
-        price: 2500,
+        price: "od " + 2499,
         discount: 0,
         features: [
             {
@@ -216,7 +216,7 @@ export const sale = {
         isActive: true,
         title: "SPRING SALE",
         desc: "Unikatowy pakiet tylko dla kolejnych 5 klientów:",
-        price: 750,
+        price: 749,
         features: [
             {
                 feature: "Własna Domena"

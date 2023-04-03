@@ -19,7 +19,7 @@ const About = (props) => {
         <div className={`flex-1 flex flex-col justify-center`}>
           {about.map((about, index) => (
             <div key={index} className='mb-10 flex items-center'>
-              <img src={about.img} className='w-[58px] h-[58px] mr-5'/>
+              <img src={about.img} alt={about.title} className='w-[58px] h-[58px] mr-5'/>
               <div>  
                 <h3 className='text-white text-[20px] font-bold'>{about.title}</h3>
                 <p className='text-dimWhite sm:text-[18px] text-[12px] max-w-[470px]'>{about.description}</p>

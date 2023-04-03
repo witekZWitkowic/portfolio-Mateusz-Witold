@@ -49,7 +49,7 @@ const Carousell = (props) => {
             <div className='flex flex-1 justify-center'>
                 <ReactCardFlip key={desc} isFlipped={flipped} flipDirection="horizontal">
                     <div className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
-                    <img src={img} className='w-[100px] h-[100px]'/>
+                    <img src={img} alt={title} className='w-[100px] h-[100px]'/>
                     <h3 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{title}</h3>
                     <p className='text-zinc-200 text-[18px] h-[50px] mb-5'>{desc}</p>
                     {(discount == 0) ? 
@@ -60,7 +60,7 @@ const Carousell = (props) => {
                     <Button name="Zobacz szczegóły" onClick={() => setFlipped(current => !current)}/>
                     </div>
                     <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
-                    <img src={cross} onClick={() => setFlipped(current => !current)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
+                    <img src={cross} alt="Cross" onClick={() => setFlipped(current => !current)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
                     <h3 className='text-white text-[30px] font-bold text-gradient'>{title}</h3>
                     {(discount == 0) ? 
                         <h4 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{pricingPlan === 0 ? price : price + " zł"}</h4> 

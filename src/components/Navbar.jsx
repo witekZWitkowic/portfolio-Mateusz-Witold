@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { sale } from '../constants'
 
 
+
 const Navbar = (props) => {
 
     const [openCloseNav, setOpenCloseNav] = useState(false);
@@ -24,9 +25,12 @@ const Navbar = (props) => {
             ))}
         </ul>
         <div className={`sm:hidden flex flex-1 justify-end items-center z-50`}>
-            <img src={!openCloseNav ? menu : close} 
-            onClick={() => {setOpenCloseNav((prev) => !prev);setInitNav(false)}} 
-            className={`${openCloseNav ? "fixed z-10" : "static z-10"}`} />
+
+            <div className={`${!openCloseNav ? 'menu_burger' : 'menu_burger open'}`}>
+                <div className={`menu_burger-btn ${openCloseNav ? "fixed z-10" : "static z-10"}`} 
+                onClick={() => {setOpenCloseNav((prev) => !prev);setInitNav(false)}} 
+                />
+            </div>
             <div className={`p-6 bg-black-gradient fixed top-0 right-0 w-[100%] h-[50%] ${(initNav) ? "hidden" : "flex"} ${openCloseNav ? "sidebar" : "sidebar-out"}`}>
                 <ul className='list-none flex-col justify-end items-center flex-1 mt-10'>
                     {navLinks.map((link, index)=>(

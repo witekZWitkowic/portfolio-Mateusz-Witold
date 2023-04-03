@@ -342,3 +342,57 @@
   0% { width: 0; }
   100% { width: 100%; }
 }
+
+.menu_burger{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+}
+
+.menu_burger-btn {
+  width: 30px;
+  height: 2px;
+  background-color: #def9fa;
+  border-radius: 3px;
+  transition: all .5s ease-in-out;
+  z-index: 9999999999999999999999999;
+}
+
+.menu_burger-btn::before,
+.menu_burger-btn::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #def9fa;
+  border-radius: 3px;
+  z-index: 999999999999999999999999999999;
+  transition: all .5s ease-in-out;
+}
+
+.menu_burger-btn::before{
+  transform: translateY(-8px);
+}
+
+.menu_burger-btn::after{
+  transform: translateY(8px);
+}
+
+.menu_burger.open .menu_burger-btn {
+  transform: translateX(-50px);
+  background-color: transparent;
+}
+
+.menu_burger.open .menu_burger-btn::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu_burger.open .menu_burger-btn::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
