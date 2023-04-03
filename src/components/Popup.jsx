@@ -19,20 +19,35 @@ const Popup = (props) => {
   }
 
   const popupForm = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
-    ReactGA.event({
-      category:"Email", 
-      action: "Popup form email"
-    });
+    let emptyForm = true;
 
-    emailjs.sendForm('service_contactForm_WM', 'template_wm', popupForm.current, 'LbjIHyDLBTMjgCzYg');
+    let counter = 0;
+    for(let i = 0; i<e.target.length-1;i++){
+      if(e.target[i].value.length>0) counter++;
+    }
+    if(counter == (e.target.length-1))emptyForm = false;
 
-    document.getElementById('popupForm').reset();
+    const errors = document.querySelector(`[id^="${formId}_error"]`);
 
+    if(errors || emptyForm){
+      //console.log("error")
+    }else{
+      //console.log("email sent")
+      ReactGA.event({
+        category:"Email", 
+        action: "Popup form email"
+      });
+
+      emailjs.sendForm('service_contactForm_WM', 'template_wm', popupForm.current, 'LbjIHyDLBTMjgCzYg');
+    }
     document.getElementsByTagName("body")[0].style.overflow = "auto";
     setPlanChoosed("");
+
+    //document.getElementById('contactForm').reset();
   };
 
   if(planChoosed)document.getElementsByTagName("body")[0].style.overflow = "hidden";
@@ -45,7 +60,7 @@ const Popup = (props) => {
             <h2 className='text-white sm:text-[20px] text-[16px] mb-7'>Potrzebujemy jeszcze kilka informacji, <br/> abyśmy mogli się z tobą skontaktować</h2>
             <form ref={popupForm} id="popupForm" onSubmit={sendEmail} className="space-y-4">
                 <input type="hidden" name="subject" value={planChoosed} />
-                <Input type="email" forName="email" placeholderName="Napisz swój adres email." labelName="Adres e-mail" name="email" isRequired={true} formId={formId}/>
+                <Input type="email" forName="email" placeholderName="Podaj swój adres email." labelName="Adres e-mail" name="email" isRequired={true} formId={formId}/>
                 <div className='flex flex-col mx-auto'>
                   <label htmlFor="telPop" className="block mb-1 text-[18px] font-medium text-white">Numer telefonu (opcjonalnie)</label>
                   <input type="text" id="telPop" name="tel" className="shadow-sm bg-black-gradient border border-teal-300 text-white outline-none text-sm rounded-lg focus:border-teal-600 block p-2.5 " placeholder="Wprowadź numer telefonu" />
