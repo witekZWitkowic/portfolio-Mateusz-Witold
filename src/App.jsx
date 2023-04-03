@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale, Portfolio, CookieReminder} from './components'
+import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale, Portfolio, CookieReminder, Alert} from './components'
 import Carousell from './components/Carousell'
 import styles from './style'
 import { useState, useEffect } from 'react';
@@ -20,14 +20,11 @@ const App = () => {
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   }
-
-  // useEffect(()=>{
-  //   ReactGA.pageview(window.location.pathname);
-  // }, []);
   
   return (
     <div className='bg-page-gradient w-full overflow-hidden'>
       <Popup planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
+      {/* <Alert name="Wiadomość wysłana!" background="bg-blue-gradient"/> */}
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>

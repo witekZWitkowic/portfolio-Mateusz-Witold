@@ -9,18 +9,35 @@ import ReactGA from 'react-ga4';
 const Contact = () => {
 
   const contactForm = useRef();
+  const formId = "contactUs";
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    ReactGA.event({
-      category:"Email", 
-      action: "Contact form email"
-    });
+    let emptyForm = true;
 
-    emailjs.sendForm('service_contactForm_WM', 'template_wm', contactForm.current, 'LbjIHyDLBTMjgCzYg');
+    let counter = 0;
+    for(let i = 0; i<e.target.length-1;i++){
+      if(e.target[i].value.length>0) counter++;
+    }
+    if(counter == (e.target.length-1))emptyForm = false;
 
-    document.getElementById('contactForm').reset();
+    const errors = document.querySelector(`[id^="${formId}_error"]`);
+
+    if(errors || emptyForm){
+      console.log("error")
+    }else{
+      console.log("email sent")
+      // ReactGA.event({
+      //   category:"Email", 
+      //   action: "Contact form email"
+      // });
+
+      // emailjs.sendForm('service_contactForm_WM', 'template_wm', contactForm.current, 'LbjIHyDLBTMjgCzYg');
+    }
+
+
+    //document.getElementById('contactForm').reset();
   };
 
   
@@ -32,13 +49,13 @@ const Contact = () => {
           Masz jakieś pytania? Z chęcią na nie odpowiemy!
         </p>
         <form ref={contactForm} id="contactForm" onSubmit={sendEmail} className="space-y-4">
-            <Input type="email" forName="email" placeholderName="Napisz swój adres email." labelName="Adres e-mail" name="email"/>
-            <Input type="text" forName="text" placeholderName="Napisz temat wiadomości." labelName="Temat" name="subject"/>
+            <Input type="email" forName="email" placeholderName="Napisz swój adres email." labelName="Adres e-mail" name="email" isRequired={true} formId={formId}/>
+            <Input type="text" forName="text" placeholderName="Napisz temat wiadomości." labelName="Temat" name="subject" isRequired={true} formId={formId}/>
             <div className='flex flex-col mx-auto'>
                 <label htmlFor="tel" className="block mb-1 text-[18px] font-medium text-white">Numer telefonu (opcjonalnie)</label>
                 <input type="text" id="tel" name="tel" className="shadow-sm bg-black-gradient border border-teal-300 text-white outline-none text-sm rounded-lg focus:border-teal-600 block p-2.5 " placeholder="Wprowadź numer telefonu" />
             </div>
-            <Textarea forName="message" labelName="Treść wiadomości" placeholderName="Napisz treść swojej wiadomości." name="message"/>
+            <Textarea forName="message" labelName="Treść wiadomości" placeholderName="Napisz treść swojej wiadomości." name="message" isRequired={true} formId={formId}/>
             <div className='w-[150px] mx-auto'>
               <Button name="Wyślij!"/>
             </div>

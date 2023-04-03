@@ -322,3 +322,23 @@
   }
   
 }
+
+.progress {
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  display: flex;
+  height: 5px;
+  width: 100%;
+}
+
+.progress-value {
+  animation: load 5s normal forwards;
+  height: 5px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
