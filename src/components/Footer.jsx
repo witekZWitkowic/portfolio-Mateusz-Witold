@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='w-[90%] h-[1px] bg-zinc-800 m-auto'/>
       <div className='flex justify-between my-7'>
         <div>
-          <h2 className='text-gradient'>&#174; Web-Masters.pl </h2>
+          <h4 className='text-gradient'>&#174; Web-Masters.pl </h4>
         </div>
         <div className='flex'>
           <BsInstagram size="25" className='mr-4 text-teal-400'/>

@@ -15,20 +15,20 @@ const About = (props) => {
   }
 
   return (
-      <div className={`flex-1 flex sm:flex-row flex-col items-center w-full py-[100px]`}>
+      <div className={`flex-1 flex sm:flex-row flex-col items-center w-full`}>
         <div className={`flex-1 flex flex-col justify-center`}>
           {about.map((about, index) => (
             <div key={index} className='mb-10 flex items-center'>
               <img src={about.img} className='w-[58px] h-[58px] mr-5'/>
               <div>  
-                <h2 className='text-white text-[20px] font-bold'>{about.title}</h2>
-                <p className='text-dimWhite max-w-[470px]'>{about.description}</p>
+                <h3 className='text-white text-[20px] font-bold'>{about.title}</h3>
+                <p className='text-dimWhite sm:text-[18px] text-[12px] max-w-[470px]'>{about.description}</p>
               </div>
             </div>
           ))}
         </div>
         <div className={`flex-1 flex flex-col sm:items-start items-center justify-center md:my-0 my-10`}>
-          <h2 className='text-white md:text-[58px] text-[48px] font-semibold sm:mb-3 mb-12 text-center'>
+          <h2 className='text-white md:text-[58px] text-[44px] font-semibold mb-3 text-center'>
                 Ty prowadź swój biznes, <br className='sm:block hidden'/> {" "}
                 My zajmiemy się stroną.
           </h2>

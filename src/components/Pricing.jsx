@@ -36,28 +36,28 @@ const Pricing = (props) => {
 
   return (
     <section className={`md:flex hidden flex-col justify-between ${styles.boxWidth} my-12`}>
-      <h1 className='text-center text-white text-[50px] font-bold mb-6'>Wybierz swój plan:</h1>
+      <h1 className='text-center text-white sm:text-[50px] text-[44px] font-bold mb-6'>Wybierz swój plan:</h1>
       <div className='flex flex-1 justify-between'>
         {pricing.map((plan, index) => (
           <ReactCardFlip key={index+"A"} isFlipped={flipped[index]} flipDirection="horizontal">
             <div className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
               <img src={plan.img} className='w-[100px] h-[100px]'/>
-              <h1 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{plan.title}</h1>
+              <h2 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{plan.title}</h2>
               <p className='text-zinc-200 text-[18px] h-[50px] mb-5'>{plan.desc}</p>
               {(plan.discount == 0) ? 
-                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h2> 
+                <h3 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h3> 
                 : 
-                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{plan.price}</span></span> {plan.price * (1-(plan.discount/100))} zł</h2>
+                <h3 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{plan.price}</span></span> {plan.price * (1-(plan.discount/100))} zł</h3>
               }
               <Button name="Zobacz szczegóły" onClick={() => {handleClick(index);analytics(index)}}/>
             </div>
             <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
               <img src={cross} onClick={() => handleClick(index)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
-              <h1 className='text-white text-[30px] font-bold text-gradient'>{plan.title}</h1>
+              <h2 className='text-white text-[30px] font-bold text-gradient'>{plan.title}</h2>
               {(plan.discount == 0) ? 
-                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h2> 
+                <h3 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h3> 
                 : 
-                <h2 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{plan.price}</span></span> {plan.price * (1-(plan.discount/100))} zł</h2>
+                <h3 className='text-white text-[25px] h-[25px] font-semibold mb-5'><span className='text-cyan-500 line-through '><span className='text-zinc-500'>{plan.price}</span></span> {plan.price * (1-(plan.discount/100))} zł</h3>
               }
               <ul className='list-disc pl-6'>
                 {plan.features.map((feature, index) => (

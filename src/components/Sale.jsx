@@ -24,7 +24,7 @@ const Sale = (props) => {
         <h2 className='text-gradient font-bold text-[24px] -rotate-90 relative right-[-175px]'>{sale.title}</h2>
       </div>
       </div>
-      <div className={`fixed  top-1/4 left-[-26rem] z-[9] ${initSale ? "hidden" : "grid"}`}>
+      <div className={`fixed top-1/4 left-[-26rem] z-[9] ${initSale ? "hidden" : "grid"}`}>
         <div className={`bg-black-gradient-2 rounded-xl text-center w-[400px] py-10 place-content-center ${openCloseSale ? "sale-in" : "sale-out"}`}>
           <img src={cross} onClick={()=>setOpenCloseSale(false)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
           <h2 className='text-gradient font-bold text-[32px] py-3'>{sale.title}</h2>

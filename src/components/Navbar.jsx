@@ -14,8 +14,8 @@ const Navbar = (props) => {
     const {setPlanChoosed} = props;
  
     return(
-    <div className={`flex justify-between ${styles.boxWidth}`}>
-        <a className='sm:w-[5%] sm:h-[5%] w-[15%] h-[15%] m-5' href="https://www.web-masters.pl">
+    <div className={`flex justify-between mt-5 ${styles.boxWidth}`}>
+        <a className='sm:w-[5%] md:h-[5%] w-[15%] h-[15%]' href="https://www.web-masters.pl">
             <img src={WMlogo}  />
         </a>
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
@@ -23,7 +23,7 @@ const Navbar = (props) => {
                 <li key={link.id} className={`links cursor-pointer text-[18px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-5'}`} onClick={()=>handleClickScroll(link.id)}>{link.title}</li>
             ))}
         </ul>
-        <div className={`sm:hidden flex flex-1 justify-end items-center m-5 z-50`}>
+        <div className={`sm:hidden flex flex-1 justify-end items-center z-50`}>
             <img src={!openCloseNav ? menu : close} 
             onClick={() => {setOpenCloseNav((prev) => !prev);setInitNav(false)}} 
             className={`${openCloseNav ? "fixed z-10" : "static z-10"}`} />

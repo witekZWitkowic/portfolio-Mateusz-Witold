@@ -38,10 +38,10 @@ const Popup = (props) => {
   if(planChoosed)document.getElementsByTagName("body")[0].style.overflow = "hidden";
 
   return (
-    <div id="outerPopup" onClick={handleClick} className={`fixed inset-0 z-10 w-full h-full bg-black bg-opacity-70 backdrop-blur-sm ${(planChoosed === "") ? "hidden" : "block"} flex items-center justify-center`}>
+    <div id="outerPopup" onClick={handleClick} className={`fixed inset-0 z-[9999999999] w-full h-full bg-black bg-opacity-70 backdrop-blur-sm ${(planChoosed === "") ? "hidden" : "block"} flex items-center justify-center`}>
         <div onClick={handleClick} className='z-11 bg-black-gradient w-[700px] sm:h-[700px] rounded-xl p-10 text-center px-18 relative'>
-            <img src={cross} id="crossPopup" onClick={handleClick} className='w-[25px] h-[25px] absolute right-5 top-5 cursor-pointer'/>
-            <h1 className='text-white text-[32px] my-5'>Wybrany plan: <span className='text-white text-[30px] font-bold text-gradient'>{planChoosed}</span></h1>
+            <img src={cross} id="crossPopup" onClick={handleClick} className='w-[25px] h-[25px] absolute right-5 xxs:top-10 cursor-pointer'/>
+            <h3 className='text-white text-[32px] my-5'>Wybrany plan: <span className='text-white text-[30px] font-bold text-gradient'>{planChoosed}</span></h3>
             <h2 className='text-white sm:text-[20px] text-[16px] mb-7'>Potrzebujemy jeszcze kilka informacji, <br/> abyśmy mogli się z tobą skontaktować</h2>
             <form ref={popupForm} id="popupForm" onSubmit={sendEmail} className="space-y-4">
                 <input type="hidden" name="subject" value={planChoosed} />
