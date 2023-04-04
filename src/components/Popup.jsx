@@ -5,6 +5,7 @@ import Button from './Button'
 import { cross } from '../assets';
 import ReactGA from 'react-ga4';
 import emailjs from '@emailjs/browser';
+import TelInput from './TelInput';
 
 const Popup = (props) => {
   const {planChoosed, setPlanChoosed, setAlertSent, setAlertError} = props;
@@ -23,17 +24,13 @@ const Popup = (props) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    let emptyForm = true;
-
-    let counter = 0;
+    let isEmpty = false;
     for(let i = 0; i<e.target.length-1;i++){
-      if(e.target[i].value.length>0) counter++;
+      if(e.target[i].name!="tel" && e.target[i].value.length==0)isEmpty=true;
     }
-    if(counter == (e.target.length-1))emptyForm = false;
 
     const errors = document.querySelector(`[id^="${formId}_error"]`);
-
-    if(errors || emptyForm){
+    if(errors || isEmpty){
       setAlertError(true);
     }else{
       setAlertSent(true);
@@ -60,10 +57,7 @@ const Popup = (props) => {
             <form ref={popupForm} id="popupForm" onSubmit={sendEmail} className="space-y-4">
                 <input type="hidden" name="subject" value={planChoosed} />
                 <Input type="email" forName="email" placeholderName="Podaj swój adres email." labelName="Adres e-mail" name="email" isRequired={true} formId={formId}/>
-                <div className='flex flex-col mx-auto'>
-                  <label htmlFor="telPop" className="block mb-1 text-[18px] font-medium text-white">Numer telefonu (opcjonalnie)</label>
-                  <input type="text" id="telPop" name="tel" className="shadow-sm bg-black-gradient border border-teal-300 text-white outline-none text-sm rounded-lg focus:border-teal-600 block p-2.5 " placeholder="Wprowadź numer telefonu" />
-                </div>
+                <TelInput forName="tel" labelName="Numer telefonu (opcjonalnie)" placeholderName="Podaj numer telefonu" name="tel" isRequired={false} formId={formId}/>
                 <Textarea forName="message" labelName="Dodatkowe informacje" placeholderName="Masz dla nas dodatkowe pytania, bądź informację? Dodaj je tutaj" isRequired={true} formId={formId}/>
                 <div className='w-[150px] mx-auto' name="message">
                   <Button name="Wyślij!"/>

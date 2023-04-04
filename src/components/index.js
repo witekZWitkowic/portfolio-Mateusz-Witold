@@ -11,6 +11,7 @@ import AnalyticsTracker from "./AnalyticsTracker";
 import Sale from "./Sale";
 import CookieReminder from "./CookieReminder";
 import Alert from "./Alert";
+import TelInput from "./TelInput";
 
 export {
     About,
@@ -25,5 +26,6 @@ export {
     AnalyticsTracker,
     Sale,
     CookieReminder,
-    Alert
+    Alert,
+    TelInput
 }

@@ -4,30 +4,26 @@ import Textarea from './Textarea'
 import Input from './Input'
 import emailjs from '@emailjs/browser';
 import ReactGA from 'react-ga4';
-import Alert from './Alert';
+import TelInput from './TelInput';
+
 
 
 const Contact = (props) => {
 
   const contactForm = useRef();
   const formId = "contactUs";
-  const alert = "none";
   const {setAlertError, setAlertSent} = props;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    let emptyForm = true;
-
-    let counter = 0;
+    let isEmpty = false;
     for(let i = 0; i<e.target.length-1;i++){
-      if(e.target[i].value.length>0) counter++;
+      if(e.target[i].name!="tel" && e.target[i].value.length==0)isEmpty=true;
     }
-    if(counter == (e.target.length-1))emptyForm = false;
 
     const errors = document.querySelector(`[id^="${formId}_error"]`);
-
-    if(errors || emptyForm){
+    if(errors || isEmpty){
       setAlertError(true);
     }else{
       setAlertSent(true);
@@ -52,10 +48,7 @@ const Contact = (props) => {
         <form ref={contactForm} id="contactForm" onSubmit={sendEmail} className="space-y-4">
             <Input type="email" forName="email" placeholderName="Napisz swój adres email." labelName="Adres e-mail" name="email" isRequired={true} formId={formId}/>
             <Input type="text" forName="text" placeholderName="Napisz temat wiadomości." labelName="Temat" name="subject" isRequired={true} formId={formId}/>
-            <div className='flex flex-col mx-auto'>
-                <label htmlFor="tel" className="block mb-1 text-[18px] font-medium text-white">Numer telefonu (opcjonalnie)</label>
-                <input type="text" id="tel" name="tel" className="shadow-sm bg-black-gradient border border-teal-300 text-white outline-none text-sm rounded-lg focus:border-teal-600 block p-2.5 " placeholder="Wprowadź numer telefonu" />
-            </div>
+            <TelInput forName="tel" labelName="Numer telefonu (opcjonalnie)" placeholderName="Podaj numer telefonu" name="tel" isRequired={false} formId={formId}/>
             <Textarea forName="message" labelName="Treść wiadomości" placeholderName="Napisz treść swojej wiadomości." name="message" isRequired={true} formId={formId}/>
             <div className='w-[150px] mx-auto'>
               <Button name="Wyślij!"/>
