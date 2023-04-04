@@ -17,7 +17,7 @@ const Navbar = (props) => {
     return(
     <div className={`flex justify-between mt-5 ${styles.boxWidth}`}>
         <a className='sm:w-[5%] md:h-[5%] w-[15%] h-[15%]' href="https://www.web-masters.pl">
-            <img src={WMlogo}  />
+            <img src={WMlogo} alt="Web-Masters Logo" />
         </a>
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
             {navLinks.map((link, index) => (
