@@ -7,7 +7,7 @@ import ReactGA from 'react-ga4';
 import emailjs from '@emailjs/browser';
 
 const Popup = (props) => {
-  const {planChoosed, setPlanChoosed} = props;
+  const {planChoosed, setPlanChoosed, setAlertSent, setAlertError} = props;
 
   const formId = "popup";
   
@@ -34,26 +34,25 @@ const Popup = (props) => {
     const errors = document.querySelector(`[id^="${formId}_error"]`);
 
     if(errors || emptyForm){
-      //console.log("error")
+      setAlertError(true);
     }else{
-      //console.log("email sent")
+      setAlertSent(true);
       ReactGA.event({
         category:"Email", 
         action: "Popup form email"
       });
 
       emailjs.sendForm('service_contactForm_WM', 'template_wm', popupForm.current, 'LbjIHyDLBTMjgCzYg');
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
+      setPlanChoosed("");
     }
-    document.getElementsByTagName("body")[0].style.overflow = "auto";
-    setPlanChoosed("");
-
     //document.getElementById('contactForm').reset();
   };
 
   if(planChoosed)document.getElementsByTagName("body")[0].style.overflow = "hidden";
 
   return (
-    <div id="outerPopup" onClick={handleClick} className={`fixed inset-0 z-[9999999999] w-full h-full bg-black bg-opacity-70 backdrop-blur-sm ${(planChoosed === "") ? "hidden" : "block"} flex items-center justify-center`}>
+    <div id="outerPopup" onClick={handleClick} className={`fixed inset-0 z-[100] w-full h-full bg-black bg-opacity-70 backdrop-blur-sm ${(planChoosed === "") ? "hidden" : "block"} flex items-center justify-center`}>
         <div onClick={handleClick} className='z-11 bg-black-gradient w-[700px] sm:h-[700px] rounded-xl p-10 text-center px-18 relative'>
             <img src={cross} alt="Cross" id="crossPopup" onClick={handleClick} className='w-[25px] h-[25px] absolute right-5 xxs:top-10 cursor-pointer'/>
             <h3 className='text-white text-[32px] my-5'>Wybrany plan: <span className='text-white text-[30px] font-bold text-gradient'>{planChoosed}</span></h3>

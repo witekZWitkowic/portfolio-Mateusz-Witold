@@ -4,12 +4,15 @@ import Textarea from './Textarea'
 import Input from './Input'
 import emailjs from '@emailjs/browser';
 import ReactGA from 'react-ga4';
+import Alert from './Alert';
 
 
-const Contact = () => {
+const Contact = (props) => {
 
   const contactForm = useRef();
   const formId = "contactUs";
+  const alert = "none";
+  const {setAlertError, setAlertSent} = props;
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,18 +28,16 @@ const Contact = () => {
     const errors = document.querySelector(`[id^="${formId}_error"]`);
 
     if(errors || emptyForm){
-      console.log("error")
+      setAlertError(true);
     }else{
-      console.log("email sent")
-      // ReactGA.event({
-      //   category:"Email", 
-      //   action: "Contact form email"
-      // });
+      setAlertSent(true);
+      ReactGA.event({
+        category:"Email", 
+        action: "Contact form email"
+      });
 
-      // emailjs.sendForm('service_contactForm_WM', 'template_wm', contactForm.current, 'LbjIHyDLBTMjgCzYg');
+      emailjs.sendForm('service_contactForm_WM', 'template_wm', contactForm.current, 'LbjIHyDLBTMjgCzYg');
     }
-
-
     //document.getElementById('contactForm').reset();
   };
 

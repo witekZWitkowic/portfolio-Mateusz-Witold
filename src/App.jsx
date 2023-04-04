@@ -11,6 +11,8 @@ const App = () => {
   ReactGA.initialize("G-0R0SY0R690");
   
   const[planChoosed,setPlanChoosed] = useState("");
+  const[alertSent,setAlertSent] = useState(false);
+  const[alertError,setAlertError] = useState(false);
 
   const handleClickScroll = (id) => {
     ReactGA.event({
@@ -23,7 +25,9 @@ const App = () => {
   
   return (
     <div className='bg-page-gradient w-full overflow-hidden'>
-      <Popup planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} />
+      <Popup planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} setAlertSent={setAlertSent} setAlertError={setAlertError}/>
+      {(alertSent) ? <Alert name="Wiadomość wysłana!" background="bg-blue-gradient" setAlertSent={setAlertSent} setAlertError={setAlertError}/> : ""}
+      {(alertError) ? <Alert name="Błąd! Sprawdź formularz ponownie" background="bg-red-600" setAlertSent={setAlertSent} setAlertError={setAlertError}/> : ""}
       {/* <Alert name="Wiadomość wysłana!" background="bg-blue-gradient"/> */}
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -56,7 +60,7 @@ const App = () => {
             <Carousell planChoosed={planChoosed} setPlanChoosed={setPlanChoosed}/>
           </div>
           <Portfolio />
-          <Contact />
+          <Contact setAlertSent={setAlertSent} setAlertError={setAlertError}/>
           <Footer />
           
         </div>
