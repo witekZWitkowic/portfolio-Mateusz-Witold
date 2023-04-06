@@ -58,8 +58,8 @@ const Popup = (props) => {
                 <input type="hidden" name="subject" value={planChoosed} />
                 <Input type="email" forName="email" placeholderName="Podaj swój adres email." labelName="Adres e-mail" name="email" isRequired={true} formId={formId}/>
                 <TelInput forName="tel" labelName="Numer telefonu (opcjonalnie)" placeholderName="Podaj numer telefonu" name="tel" isRequired={false} formId={formId}/>
-                <Textarea forName="message" labelName="Dodatkowe informacje" placeholderName="Masz dla nas dodatkowe pytania, bądź informację? Dodaj je tutaj" isRequired={true} formId={formId}/>
-                <div className='w-[150px] mx-auto' name="message">
+                <Textarea forName="message" name="message" labelName="Dodatkowe informacje" placeholderName="Masz dla nas dodatkowe pytania, bądź informację? Dodaj je tutaj" isRequired={true} formId={formId}/>
+                <div className='w-[150px] mx-auto'>
                   <Button name="Wyślij!"/>
                 </div>
             </form>
