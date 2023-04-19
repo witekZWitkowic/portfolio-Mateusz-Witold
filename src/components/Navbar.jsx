@@ -12,7 +12,7 @@ const Navbar = (props) => {
     const [openCloseNav, setOpenCloseNav] = useState(false);
     const [initNav, setInitNav] = useState(true);
     const {handleClickScroll} = props;
-    const {setPlanChoosed} = props;
+    const {setSpecialOfferPopup} = props;
  
     return(
     <div className={`flex justify-between mt-5 ${styles.boxWidth}`}>
@@ -39,7 +39,7 @@ const Navbar = (props) => {
                     </li>
                     ))}
                     {(sale.isActive) ? 
-                    <li key={sale.title} className={`font-poppins text-[30px] text-white font-normal cursor-pointer mt-5`} onClick={()=>{setPlanChoosed(sale.title);setOpenCloseNav((prev) => !prev)}}>
+                    <li key={sale.title} className={`font-poppins text-[30px] text-white font-normal cursor-pointer mt-5`} onClick={()=>{setSpecialOfferPopup(true);setOpenCloseNav((prev) => !prev)}}>
                         <span className='text-gradient font-semibold'>{sale.title}</span>
                     </li> 
                     : ""}

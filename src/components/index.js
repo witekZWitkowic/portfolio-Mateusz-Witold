@@ -12,6 +12,7 @@ import Sale from "./Sale";
 import CookieReminder from "./CookieReminder";
 import Alert from "./Alert";
 import TelInput from "./TelInput";
+import SpecialOfferPopup from "./SpecialOfferPopup";
 
 export {
     About,
@@ -27,5 +28,6 @@ export {
     Sale,
     CookieReminder,
     Alert,
-    TelInput
+    TelInput,
+    SpecialOfferPopup
 }

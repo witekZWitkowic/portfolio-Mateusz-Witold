@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale, Portfolio, CookieReminder, Alert} from './components'
+import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale, Portfolio, CookieReminder, Alert, SpecialOfferPopup} from './components'
 import Carousell from './components/Carousell'
 import styles from './style'
 import { useState, useEffect } from 'react';
@@ -11,6 +11,7 @@ const App = () => {
   ReactGA.initialize("G-0R0SY0R690");
   
   const[planChoosed,setPlanChoosed] = useState("");
+  const[specialOfferPopup,setSpecialOfferPopup] = useState(false);
   const[alertSent,setAlertSent] = useState(false);
   const[alertError,setAlertError] = useState(false);
 
@@ -32,7 +33,7 @@ const App = () => {
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            <Navbar handleClickScroll={handleClickScroll} setPlanChoosed={setPlanChoosed} />
+            <Navbar handleClickScroll={handleClickScroll} setSpecialOfferPopup={setSpecialOfferPopup} />
           </div>
         </div>
 
@@ -44,6 +45,7 @@ const App = () => {
       </div>
 
       <Sale setPlanChoosed={setPlanChoosed} />
+      <SpecialOfferPopup specialOfferPopup={specialOfferPopup} setSpecialOfferPopup={setSpecialOfferPopup} setPlanChoosed={setPlanChoosed} />
 
 
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
