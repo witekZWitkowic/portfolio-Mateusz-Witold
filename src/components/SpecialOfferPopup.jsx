@@ -34,8 +34,8 @@ const SpecialOfferPopup = (props) => {
     <div id="outerSalePopup" onClick={handleClick} className={`fixed inset-0 z-[100] w-full h-full bg-black bg-opacity-70 backdrop-blur-sm ${(specialOfferPopup === false) ? "hidden" : "block"} flex items-center justify-center`}>
         <div onClick={handleClick} className='z-11 bg-black-gradient w-[700px] sm:h-[700px] rounded-xl p-10 text-center px-18 relative'>
             <IoCloseCircleOutline title='Close' id="crossSalePopup"  onClick={handleClick} color='#00d8ff' className='w-[30px] h-[30px] absolute right-5 xxs:top-10 cursor-pointer' />
-            <h2 className='text-gradient font-bold text-[32px] py-3'>{sale.title}</h2>
-            <h3 className='text-white font-semibold'>{sale.desc}</h3>
+            <h3 className='text-gradient font-bold text-[32px] py-3'>{sale.title}</h3>
+            <p className='text-white font-semibold'>{sale.desc}</p>
             <ul className='list-disc pl-6 py-2 text-left mx-10'>
               {sale.features.map((feature, index) => (
                 <li key={index} className={`even:text-zinc-100 odd:text-zinc-300 hover:text-cyan-300 mt-2 cursor-default`}>{feature.feature}</li>

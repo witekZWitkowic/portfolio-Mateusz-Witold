@@ -51,7 +51,7 @@ const Popup = (props) => {
         <div onClick={handleClick} className='z-11 bg-black-gradient w-[700px] sm:h-[700px] rounded-xl p-10 text-center px-18 relative'>
             <IoCloseCircleOutline title='Close' id="crossPopup"  onClick={handleClick} color='#00d8ff' className='w-[30px] h-[30px] absolute right-5 xxs:top-10 cursor-pointer' />
             <h3 className='text-white text-[32px] my-5'>Wybrany plan: <span className='text-white text-[30px] font-bold text-gradient'>{planChoosed}</span></h3>
-            <h2 className='text-white sm:text-[20px] text-[16px] mb-7'>Potrzebujemy jeszcze kilka informacji, <br/> abyśmy mogli się z tobą skontaktować</h2>
+            <h4 className='text-white sm:text-[20px] text-[16px] mb-7'>Potrzebujemy jeszcze kilka informacji, <br/> abyśmy mogli się z tobą skontaktować</h4>
             <form ref={popupForm} id="popupForm" onSubmit={sendEmail} className="space-y-4">
                 <input type="hidden" name="subject" value={planChoosed} />
                 <Input type="email" forName="email" placeholderName="Podaj swój adres email." labelName="Adres e-mail" name="email" isRequired={true} formId={formId}/>

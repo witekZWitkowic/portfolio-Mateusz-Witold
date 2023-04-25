@@ -18,7 +18,7 @@ const CookieReminder = () => {
         }
         </div>
         <div className='md:mr-20 mr-5 flex flex-col items-center justify-between'>
-            <h2 className='text-white text-center font-semibold sm:text-[24px] text-[16px]'>Ta strona używa plików cookies!</h2>
+            <p className='text-white text-center font-semibold sm:text-[24px] text-[16px]'>Ta strona używa plików cookies!</p>
             <p className='text-dimWhite font-extralight text-center sm:text-[12px] text-[7px] sm:w-[540px] w-[220px] mt-1'>
                 Ta strona wykorzystuje pliki cookie. Używamy informacji zapisanych za pomocą plików
                 cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. Mogą
