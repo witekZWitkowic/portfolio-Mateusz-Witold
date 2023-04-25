@@ -215,23 +215,28 @@ export const sale = {
 
 export const portfolio = [
     // {
-    //     title:"Trainer",
+    //     title:"Spartan Trener",
+    //     desc: "Landing site dla trenera personalnego",
     //     img:trainer,
+    //     link:"https://spartan-trener.online/",
     //     features:[
-    //         '1',
-    //         '2',
-    //         '3',
-    //         '4'
+    //         'Landing site',
+    //         'Animowane zdjęcia',
+    //         'Sekcja oferty',
+    //         'Formularz kontaktowy'
     //     ]
     // },
     // {
-    //     title:"Pizza",
+    //     title:"Pizza Eccezionale",
+    //     desc: "Strona internetowa pizzerii z kilkoma podstronami",
     //     img:pizza,
+    //     link:"https://pizzaeccezionale.online/",
     //     features:[
-    //         '1',
-    //         '2',
-    //         '3',
-    //         '4'
+    //         '3 podstrony',
+    //         'Sekcja ocen',
+    //         'Formularz kontaktowy',
+    //         'Menu',
+    //         'Sekcja z animowanym losowaniem'
     //     ]
     // },
 ]
