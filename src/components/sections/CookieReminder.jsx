@@ -32,8 +32,6 @@ const CookieReminder = () => {
                 Rozumiem!
             </button>
         </div>
-        
-
     </div>
   )
 }

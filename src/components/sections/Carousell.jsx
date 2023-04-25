@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import ReactCardFlip from 'react-card-flip';
-import Button from './Button';
-import { pricing } from '../constants';
-import styles from  '../style';
+import {Button} from '../index';
+import { pricing } from '../../constants';
+import styles from  '../../style';
 import { VscChevronRight, VscChevronLeft } from "react-icons/vsc";
 import { IoCreate,IoDocumentText,IoBriefcase,IoDiamond, IoCloseCircleOutline } from "react-icons/io5";
 
@@ -50,8 +50,8 @@ const Carousell = (props) => {
 
   return (
     
-    <div id="default-carousel" className="md:hidden flex relative w-full" data-carousel="slide">
-        <section className={`flex flex-col justify-between ${styles.boxWidth} my-12`}>
+    <section id="default-carousel" className="md:hidden flex relative w-full" data-carousel="slide">
+        <div className={`flex flex-col justify-between ${styles.boxWidth} my-12`}>
             <h2 className='text-center text-white text-[50px] font-bold mb-6'>Wybierz swój plan:</h2>
             <div className='flex flex-1 justify-center'>
                 <ReactCardFlip key={desc} isFlipped={flipped} flipDirection="horizontal">
@@ -92,8 +92,8 @@ const Carousell = (props) => {
                     <VscChevronRight size={30}/>
                 </button>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
   )
 }

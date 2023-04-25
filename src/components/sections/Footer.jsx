@@ -4,7 +4,7 @@ import {GrFacebook} from 'react-icons/gr'
 
 const Footer = () => {
   return (
-    <section className='w-full flex flex-col pt-10'>
+    <footer className='w-full flex flex-col pt-10'>
       <div className='w-[90%] h-[1px] bg-zinc-800 m-auto'/>
       <div className='flex justify-between my-7'>
         <div>
@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
 

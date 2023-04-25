@@ -1,24 +1,24 @@
-import About from "./About";
-import Button from "./Button"
-import Contact from "./Contact";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Portfolio from "./Portfolio";
-import Pricing from "./Pricing";
-import FirstGlance from "./FirstGlance";
-import HowItsDone from "./HowItsDone";
-import Popup from "./Popup";
-import Sale from "./Sale";
-import CookieReminder from "./CookieReminder";
-import Alert from "./Alert";
-import TelInput from "./TelInput";
-import Input from "./Input";
-import Textarea from "./Textarea";
-import SpecialOfferPopup from "./SpecialOfferPopup";
+import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
+import Navbar from "./sections/Navbar";
+import Portfolio from "./sections/Portfolio";
+import Pricing from "./sections/Pricing";
+import FirstGlance from "./sections/FirstGlance";
+import HowItsDone from "./sections/HowItsDone";
+import Popup from "./sections/Popup";
+import Sale from "./sections/Sale";
+import CookieReminder from "./sections/CookieReminder";
+import Alert from "./sections/Alert";
+import TelInput from "./modules/TelInput";
+import Input from "./modules/Input";
+import Textarea from "./modules/Textarea";
+import SpecialOfferPopup from "./sections/SpecialOfferPopup";
+import Button from "./modules/Button";
+import Carousell from "./sections/Carousell";
 
 export {
     About,
-    Button,
     Contact,
     Footer,
     Navbar,
@@ -33,5 +33,7 @@ export {
     TelInput,
     Input,
     Textarea,
-    SpecialOfferPopup
+    SpecialOfferPopup,
+    Button,
+    Carousell
 }

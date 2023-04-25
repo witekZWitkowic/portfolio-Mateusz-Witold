@@ -1,5 +1,5 @@
-import styles from '../style'
-import Button from './Button';
+import styles from '../../style'
+import {Button} from '../index';
 import ReactGA from 'react-ga4';
 
 const FirstGlance = (props) => {
@@ -13,7 +13,8 @@ const FirstGlance = (props) => {
   }
 
   return (
-    <section className={`flex flex-1 md:flex-row flex-col ${styles.paddingY} h-[650px]`} >
+    <section id="hero">
+      <div className={`flex flex-1 md:flex-row flex-col ${styles.paddingY} h-[650px]`}>
         <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
             <h1 className='text-white sm:text-[78px] xs:text-[58px] text-[48px] font-semibold'>
                 Pomożemy Ci być <br className='sm:block hidden'/> {" "}
@@ -28,6 +29,7 @@ const FirstGlance = (props) => {
           </p>
           <Button name="Darmowa wycena" onClick={() => {setPlanChoosed("Darmowa wycena");analytics()}} />
         </div>
+      </div>
     </section>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from './Button';
-import { sale } from '../constants'
+import {Button} from '../index';
+import { sale } from '../../constants'
 import { useState } from 'react';
 import ReactGA from 'react-ga4';
 import { IoCloseCircleOutline } from "react-icons/io5";

@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import ReactGA from 'react-ga4';
-import {TelInput, Textarea, Input} from "./index"
-import Button from './Button';
+import {TelInput, Textarea, Input, Button} from "../index"
 
 
 
@@ -37,8 +36,8 @@ const Contact = (props) => {
 
   
   return (
-    <section id="contact" className="">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-[700px]">
+    <section id="contact">
+      <div className="py-8 lg:py-16 px-4 mx-auto w-[100%] sm:w-[70%]">
         <h2 className="mb-4 text-[48px] font-bold text-center text-white">Kontakt</h2>
         <p className="mb-8 lg:mb-10 text-center text-dimWhite font-light text-[15px]">
           Masz jakieś pytania? Z chęcią na nie odpowiemy!

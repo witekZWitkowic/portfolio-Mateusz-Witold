@@ -1,6 +1,6 @@
 import React from 'react'
-import {about} from '../constants'
-import Button from './Button';
+import {about} from '../../constants'
+import {Button} from '../index';
 import ReactGA from 'react-ga4';
 import {FaPencilRuler,FaChartLine,FaHandHoldingHeart } from 'react-icons/fa'
 
@@ -22,7 +22,7 @@ const About = (props) => {
   ];
 
   return (
-      <div className={`flex-1 flex sm:flex-row flex-col items-center w-full`}>
+      <section id="about" className={`flex-1 flex sm:flex-row flex-col items-center w-full`}>
         <div className={`flex-1 flex flex-col justify-center`}>
           {about.map((about, index) => (
             <div key={index} className='mb-10 flex items-center'>
@@ -47,7 +47,7 @@ const About = (props) => {
           </div>
           
         </div>
-      </div>
+      </section>
   )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import { portfolio } from '../constants'
+import { portfolio } from '../../constants'
 
 const Portfolio = () => {
   return (
     <>
-    <div id="portfolio" className={`my-24 ${(portfolio.length === 0) ? "hidden" : ""}`}>
+    <section id="portfolio" className={`my-24 ${(portfolio.length === 0) ? "hidden" : ""}`}>
       <h2 className='text-white text-center font-bold text-[48px]'>Nasze realizacje</h2>
       <div className='flex flex-wrap place-content-between gap-y-[50px] mt-10'>
       {portfolio.map((p, index) => (
@@ -26,7 +26,7 @@ const Portfolio = () => {
         </div>
       ))}
       </div>
-    </div>
+    </section>
     </>
   )
 }

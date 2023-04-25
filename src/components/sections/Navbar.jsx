@@ -1,9 +1,9 @@
 import React from 'react'
-import { navLinks } from '../constants'
-import styles from '../style';
-import { WMlogo } from '../assets';
+import { navLinks } from '../../constants'
+import styles from '../../style';
+import { WMlogo } from '../../assets';
 import { useState } from 'react';
-import { sale } from '../constants'
+import { sale } from '../../constants'
 
 
 
@@ -15,7 +15,7 @@ const Navbar = (props) => {
     const {setSpecialOfferPopup} = props;
  
     return(
-    <div className={`flex justify-between items-center mt-5 ${styles.boxWidth}`}>
+    <nav className={`flex justify-between items-center mt-5 ${styles.boxWidth}`}>
         <a className='sm:w-[5%] md:h-[5%] w-[15%] h-[15%]' href="https://www.web-masters.pl">
             <img src={WMlogo} alt="Web-Masters Logo" />
         </a>
@@ -47,7 +47,7 @@ const Navbar = (props) => {
                 </ul>
             </div>
       </div>
-    </div>
+    </nav>
   )
 }
 

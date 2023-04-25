@@ -1,9 +1,9 @@
 import React from 'react'
-import { pricing } from '../constants'
-import styles from '../style';
+import { pricing } from '../../constants'
+import styles from '../../style';
 import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
-import Button from './Button';
+import {Button} from '../index';
 import ReactGA from 'react-ga4';
 import { IoCreate,IoDocumentText,IoBriefcase,IoDiamond,IoCloseCircleOutline } from "react-icons/io5";
 
@@ -42,7 +42,8 @@ const Pricing = (props) => {
   ];
 
   return (
-    <section className={`md:flex hidden flex-col justify-between ${styles.boxWidth} my-12`}>
+    <section id="pricing" >
+      <div className={`md:flex hidden flex-col justify-between ${styles.boxWidth} my-12`}>
       <h2 className='text-center text-white sm:text-[50px] text-[44px] font-bold mb-6'>Wybierz swój plan:</h2>
       <div className='flex flex-1 justify-between'>
         {pricing.map((plan, index) => (
@@ -78,6 +79,7 @@ const Pricing = (props) => {
             </div>
           </ReactCardFlip>
         ))}
+      </div>
       </div>
     </section>
   )
