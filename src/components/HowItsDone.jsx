@@ -21,9 +21,9 @@ const HowItsDone = () => {
                 </div>
             ))}
 
-            <div className={`md:bg-[url('./assets/arrows/Arrow1.png')] bg-none bg-no-repeat bg-cover bg-center w-[340px] h-[340px] absolute top-[220px] left-[470px] z-[1]`} />
-            <div className={`md:bg-[url('./assets/arrows/Arrow2.png')] bg-none bg-no-repeat bg-cover bg-center w-[540px] h-[540px] absolute top-[540px] left-[350px] z-[3]`} />
-            <div className={`md:bg-[url('./assets/arrows/Arrow3.png')] bg-none bg-no-repeat bg-cover bg-center w-[540px] h-[540px] absolute top-[880px] left-[310px] z-[3]`} />
+            <div className={`md:bg-[url('./assets/arrows/Arrow1.webp')] bg-none bg-no-repeat bg-cover bg-center w-[340px] h-[340px] absolute top-[220px] left-[470px] z-[1]`} />
+            <div className={`md:bg-[url('./assets/arrows/Arrow2.webp')] bg-none bg-no-repeat bg-cover bg-center w-[540px] h-[540px] absolute top-[540px] left-[350px] z-[3]`} />
+            <div className={`md:bg-[url('./assets/arrows/Arrow3.webp')] bg-none bg-no-repeat bg-cover bg-center w-[540px] h-[540px] absolute top-[880px] left-[310px] z-[3]`} />
 
             {/* <img src={arrow1} className='w-[340px] h-[340px] absolute top-[220px] left-[470px] sm:block hidden' />
             <img src={arrow2} className='w-[540px] h-[540px] absolute top-[560px] left-[350px] sm:block hidden' />

@@ -4,8 +4,8 @@ import styles from '../style';
 import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
 import Button from './Button';
-import { cross } from '../assets';
 import ReactGA from 'react-ga4';
+import { IoCreate,IoDocumentText,IoBriefcase,IoDiamond,IoCloseCircleOutline } from "react-icons/io5";
 
 const Pricing = (props) => {
 
@@ -34,6 +34,13 @@ const Pricing = (props) => {
     });
   }
 
+  const icons = [
+    <IoCreate size="100" color='#00d8ff'/>,
+    <IoDocumentText size="100" color='#00d8ff'/>,
+    <IoBriefcase size="100" color='#00d8ff'/>,
+    <IoDiamond size="100" color='#00d8ff'/>
+  ];
+
   return (
     <section className={`md:flex hidden flex-col justify-between ${styles.boxWidth} my-12`}>
       <h1 className='text-center text-white sm:text-[50px] text-[44px] font-bold mb-6'>Wybierz swój plan:</h1>
@@ -41,7 +48,8 @@ const Pricing = (props) => {
         {pricing.map((plan, index) => (
           <ReactCardFlip key={index+"A"} isFlipped={flipped[index]} flipDirection="horizontal">
             <div className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
-              <img src={plan.img} alt={plan.title} className='w-[100px] h-[100px]'/>
+              {plan.icon}
+              {icons[index]}
               <h2 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{plan.title}</h2>
               <p className='text-zinc-200 text-[18px] h-[50px] mb-5'>{plan.desc}</p>
               {(plan.discount == 0) ? 
@@ -52,7 +60,7 @@ const Pricing = (props) => {
               <Button name="Zobacz szczegóły" onClick={() => {handleClick(index);analytics(index)}}/>
             </div>
             <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
-              <img src={cross} alt="Cross" onClick={() => handleClick(index)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
+              <IoCloseCircleOutline title='Close' onClick={() => handleClick(index)} color='#00d8ff' className='w-[30px] h-[30px] absolute right-3 top-3 cursor-pointer' />
               <h2 className='text-white text-[30px] font-bold text-gradient'>{plan.title}</h2>
               {(plan.discount == 0) ? 
                 <h3 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{plan.price} {(index != 0) ? "zł" : ""}</h3> 

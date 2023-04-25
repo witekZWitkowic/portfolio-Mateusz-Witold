@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import Button from './Button';
-import { cross } from '../assets';
 import { pricing } from '../constants';
 import styles from  '../style';
 import { VscChevronRight, VscChevronLeft } from "react-icons/vsc";
+import { IoCreate,IoDocumentText,IoBriefcase,IoDiamond, IoCloseCircleOutline } from "react-icons/io5";
 
 const Carousell = (props) => {
    
@@ -41,6 +41,13 @@ const Carousell = (props) => {
         });
     }
 
+    const icons = [
+        <IoCreate size="100" color='#00d8ff'/>,
+        <IoDocumentText size="100" color='#00d8ff'/>,
+        <IoBriefcase size="100" color='#00d8ff'/>,
+        <IoDiamond size="100" color='#00d8ff'/>
+    ];
+
   return (
     
     <div id="default-carousel" className="md:hidden flex relative w-full" data-carousel="slide">
@@ -49,7 +56,7 @@ const Carousell = (props) => {
             <div className='flex flex-1 justify-center'>
                 <ReactCardFlip key={desc} isFlipped={flipped} flipDirection="horizontal">
                     <div className='flex flex-col justify-between place-items-center bg-black-gradient w-[300px] h-[550px] rounded-xl p-6 text-center py-[3rem]'>
-                    <img src={img} alt={title} className='w-[100px] h-[100px]'/>
+                    {icons[pricingPlan]}
                     <h3 className='text-white text-[35px] h-[50px] font-bold text-gradient'>{title}</h3>
                     <p className='text-zinc-200 text-[18px] h-[50px] mb-5'>{desc}</p>
                     {(discount == 0) ? 
@@ -60,7 +67,7 @@ const Carousell = (props) => {
                     <Button name="Zobacz szczegóły" onClick={() => setFlipped(current => !current)}/>
                     </div>
                     <div className='bg-black-gradient w-[300px] h-[550px] rounded-xl p-6'>
-                    <img src={cross} alt="Cross" onClick={() => setFlipped(current => !current)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
+                    <IoCloseCircleOutline title='Close' onClick={() => setFlipped(current => !current)} color='#00d8ff' className='w-[30px] h-[30px] absolute right-3 top-3 cursor-pointer' />
                     <h3 className='text-white text-[30px] font-bold text-gradient'>{title}</h3>
                     {(discount == 0) ? 
                         <h4 className='text-white text-[25px] h-[25px] font-semibold mb-5'>{pricingPlan === 0 ? price : price + " zł"}</h4> 

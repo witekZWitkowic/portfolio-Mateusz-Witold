@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from './Button'
+import Button from './Button';
 import { sale } from '../constants'
 import { useState } from 'react';
-import { cross } from '../assets'
 import ReactGA from 'react-ga4';
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 const Sale = (props) => {
   const {setPlanChoosed} = props;
@@ -26,7 +26,7 @@ const Sale = (props) => {
       </div>
       <div className={`fixed top-1/4 left-[-26rem] z-[9] ${initSale ? "hidden" : "grid"}`}>
         <div className={`bg-black-gradient-2 rounded-xl text-center w-[400px] py-10 place-content-center ${openCloseSale ? "sale-in" : "sale-out"}`}>
-          <img src={cross} alt="cross" onClick={()=>setOpenCloseSale(false)} className='w-[25px] h-[25px] absolute right-3 top-3 cursor-pointer'/>
+          <IoCloseCircleOutline title='Close' onClick={()=>setOpenCloseSale(false)} color='#00d8ff' className='w-[30px] h-[30px] absolute right-3 top-3 cursor-pointer' />
           <h2 className='text-gradient font-bold text-[32px] py-3'>{sale.title}</h2>
           <h3 className='text-white font-semibold'>{sale.desc}</h3>
           <ul className='list-disc pl-6 py-2 text-left mx-20'>

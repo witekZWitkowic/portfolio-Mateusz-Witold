@@ -1,10 +1,8 @@
 import React, { useRef } from 'react';
-import Button from './Button'
-import Textarea from './Textarea'
-import Input from './Input'
 import emailjs from '@emailjs/browser';
 import ReactGA from 'react-ga4';
-import TelInput from './TelInput';
+import {TelInput, Textarea, Input} from "./index"
+import Button from './Button';
 
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 import {Navbar, About, FirstGlance, HowItsDone, Pricing, Footer, Contact, Popup, Sale, Portfolio, CookieReminder, Alert, SpecialOfferPopup} from './components'
 import Carousell from './components/Carousell'
 import styles from './style'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ReactGA from 'react-ga4';
 
 
@@ -29,7 +29,6 @@ const App = () => {
       <Popup planChoosed={planChoosed} setPlanChoosed={setPlanChoosed} setAlertSent={setAlertSent} setAlertError={setAlertError}/>
       {(alertSent) ? <Alert name="Wiadomość wysłana!" background="bg-blue-gradient" setAlertSent={setAlertSent} setAlertError={setAlertError}/> : ""}
       {(alertError) ? <Alert name="Błąd! Sprawdź formularz ponownie" background="bg-red-600" setAlertSent={setAlertSent} setAlertError={setAlertError}/> : ""}
-      {/* <Alert name="Wiadomość wysłana!" background="bg-blue-gradient"/> */}
       <div className='background-image sm:bg-center bg-center	'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>

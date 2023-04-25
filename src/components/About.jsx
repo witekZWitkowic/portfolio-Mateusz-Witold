@@ -1,7 +1,8 @@
 import React from 'react'
 import {about} from '../constants'
-import Button from './Button'
+import Button from './Button';
 import ReactGA from 'react-ga4';
+import {FaPencilRuler,FaChartLine,FaHandHoldingHeart } from 'react-icons/fa'
 
 const About = (props) => {
 
@@ -14,12 +15,18 @@ const About = (props) => {
     });
   }
 
+  const icons = [
+    <FaPencilRuler color='#00d8ff' className='w-[58px] h-[58px] mr-8'/>,
+    <FaChartLine color='#00d8ff' className='w-[58px] h-[58px] mr-8'/>,
+    <FaHandHoldingHeart color='#00d8ff' className='w-[58px] h-[58px] mr-8'/>
+  ];
+
   return (
       <div className={`flex-1 flex sm:flex-row flex-col items-center w-full`}>
         <div className={`flex-1 flex flex-col justify-center`}>
           {about.map((about, index) => (
             <div key={index} className='mb-10 flex items-center'>
-              <img src={about.img} alt={about.title} className='w-[58px] h-[58px] mr-5'/>
+              {icons[index]}
               <div>  
                 <h3 className='text-white text-[20px] font-bold'>{about.title}</h3>
                 <p className='text-dimWhite sm:text-[18px] text-[12px] max-w-[470px]'>{about.description}</p>

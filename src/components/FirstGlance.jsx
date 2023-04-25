@@ -1,5 +1,5 @@
 import styles from '../style'
-import Button from './Button'
+import Button from './Button';
 import ReactGA from 'react-ga4';
 
 const FirstGlance = (props) => {

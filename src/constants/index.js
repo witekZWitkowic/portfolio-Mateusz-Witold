@@ -1,4 +1,4 @@
-import { pozycjonowanie, customoweStrony, supportt, briefcase, diamond, edit, paper, idea, preview, working, done, wm, pin } from '../assets'
+import { idea, preview, working, done, trainer, pizza } from '../assets'
 
 export const navLinks = [
     {
@@ -23,40 +23,18 @@ export const navLinks = [
     }
 ]
 
-export const aboutUs = [
-    {
-        name: "Mateusz",
-        position: "Backend and SEO Expert",
-        description: "Mateusz is good and makes good stuff",
-    },
-    {
-        name: "Witold",
-        position: "Frontend and Styling Expert",
-        description: "Witold is good and makes good visuals",
-    }
-]
-
-export const headings = [
-    {
-        
-    }
-]
-
 export const about = [
     {
         title: "Strony na wymiar",
         description: "Twój pomysł + nasze wykonanie = Strona idealnie skrojona pod Ciebie!",
-        img: customoweStrony,
     },
     {
         title: "Pozycjonowanie",
         description: "Zadbamy o to, żeby Twoja strona była widoczna w sieci!",
-        img: pozycjonowanie,
     },
     {
         title: "Wsparcie",
         description: "Na każdym etapie tworzenia strony otrzymasz nasze pełne wsparcie!",
-        img: supportt,
     },
 ]
 
@@ -86,7 +64,6 @@ export const howItsDone = [
 export const pricing = [
     {
         title: "Edycja Strony",
-        img: edit,
         desc: "Masz już stronę, którą należy usprawnić, lub zmodernizować? Ta oferta jest dla Ciebie",
         price: "Wycena indywidualna",
         discount: 0,
@@ -110,7 +87,6 @@ export const pricing = [
     }, 
     {
         title: "Basic Plan",
-        img: paper,
         desc: "Strona-wizytówka w najlepszej proporcji jakości do ceny",
         price: "od " + 1299,
         discount: 0,
@@ -140,7 +116,6 @@ export const pricing = [
     }, 
     {
         title: "Standard Plan",
-        img: briefcase,
         desc: "Propozycja dla małych biznesów, które potrzebują większej ilości treści na stronie",
         price: "od " + 1899,
         discount: 0,
@@ -173,7 +148,6 @@ export const pricing = [
     }, 
     {
         title: "Premium Plan",
-        img: diamond,
         desc: "Okazała strona dla małych i średnich biznesów oraz długoterminowe wsparcie",
         price: "od " + 2499,
         discount: 0,
@@ -241,13 +215,23 @@ export const sale = {
 
 export const portfolio = [
     // {
-    //     title:,
-    //     img:,
+    //     title:"Trainer",
+    //     img:trainer,
     //     features:[
-    //         '',
-    //         '',
-    //         '',
-    //         ''
+    //         '1',
+    //         '2',
+    //         '3',
+    //         '4'
+    //     ]
+    // },
+    // {
+    //     title:"Pizza",
+    //     img:pizza,
+    //     features:[
+    //         '1',
+    //         '2',
+    //         '3',
+    //         '4'
     //     ]
     // },
 ]

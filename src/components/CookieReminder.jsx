@@ -1,6 +1,5 @@
 import {React, useState} from 'react'
 import {FaCookie, FaCookieBite} from 'react-icons/fa'
-import Button from './Button';
 
 
 
